@@ -9,6 +9,7 @@ public class HeadBehaviour : MonoBehaviour {
 	private float headRotation;
 	private float rotationSpeed = 180;
 	private Vector3 rayForFocusingOnBody;
+	public bool attachedToBody;
 	
 	// Use this for initialization
 	void Start () {
@@ -17,19 +18,25 @@ public class HeadBehaviour : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-		headRotation = Input.GetAxis("Mouse X") * rotationSpeed * Time.deltaTime;
-		
-		if(!isFocusedOnBody && groundTouching){
-			transform.Rotate(Vector3.up * headRotation);
-			if(Input.GetKey(KeyCode.F)){
-				FocusOnBody();
+
+		if (!attachedToBody)
+		{
+			GetComponent<Rigidbody>().isKinematic = false;
+			headRotation = Input.GetAxis("Mouse X") * rotationSpeed * Time.deltaTime;
+			
+			if(!isFocusedOnBody && groundTouching){
+				transform.Rotate(Vector3.up * headRotation);
+				if(Input.GetKey(KeyCode.F)){
+					FocusOnBody();
+				}
 			}
+		} else {
+			GetComponent<Rigidbody>().isKinematic = true;
 		}
 	}
 	
 	void OnCollisionStay(Collision collisionInfo){
-		if(collisionInfo.gameObject.name == "Ground"){
+		if(collisionInfo.gameObject.tag == "Ground"){
 			groundTouching = true;
 		}
 	}
@@ -45,7 +52,7 @@ public class HeadBehaviour : MonoBehaviour {
 			if(hit.transform.tag == "Body"){
 				Debug.Log("Körper entdeckt");
 				isFocusedOnBody = true;
-				BodyBehaviourPlaceholder.isFocused = true;
+				hit.transform.gameObject.GetComponent<Body>().isUsed = true;
 			}
 		}
 	}
