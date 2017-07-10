@@ -10,10 +10,24 @@ public class HeadBehaviour : MonoBehaviour {
 	private float rotationSpeed = 180;
 	private Vector3 rayForFocusingOnBody;
 	public bool attachedToBody;
+	public GameObject testBall;
+	public GameObject predictionLine;
+
+	private float throwPower;
+	public float maxThrowPower, minThrowPower;
+
+	private Vector3 tempPosition;
+	private Quaternion tempRotation;
+
+	private GameObject newTestBall;
+
+	private bool ThrowMode;
 	
 	// Use this for initialization
 	void Start () {
-		
+		throwPower = 400f;
+		tempPosition = transform.position;
+		tempRotation = transform.rotation;
 	}
 	
 	// Update is called once per frame
@@ -21,6 +35,8 @@ public class HeadBehaviour : MonoBehaviour {
 
 		if (!attachedToBody)
 		{
+
+			GetComponent<SphereCollider>().enabled = true;
 			GetComponent<Rigidbody>().isKinematic = false;
 			headRotation = Input.GetAxis("Mouse X") * rotationSpeed * Time.deltaTime;
 			
@@ -32,7 +48,50 @@ public class HeadBehaviour : MonoBehaviour {
 			}
 		} else {
 			GetComponent<Rigidbody>().isKinematic = true;
+			GetComponent<SphereCollider>().enabled = false;
+
+			float tempThrowPower = throwPower;
+
+
+
+			if (ThrowMode)
+			{
+				if(Input.GetAxis("Distance")>0 && throwPower < maxThrowPower)
+				{
+					throwPower += 0.2f;
+				}
+
+				if(Input.GetAxis("Distance")<0 && throwPower > minThrowPower)
+				{
+					throwPower -= 0.2f;
+				}
+
+				if (tempThrowPower != throwPower || transform.position != tempPosition || transform.rotation != tempRotation)
+				{
+					ResetThrowPredict();
+				}
+
+				if (Input.GetButtonDown("Throw"))
+				{
+					transform.parent = transform.root;
+					GetComponent<Rigidbody>().isKinematic = false;
+					attachedToBody = false;
+					GetComponent<Rigidbody>().AddForce(new Vector3(transform.TransformDirection(Vector3.forward).x*throwPower,1.7f*throwPower,transform.TransformDirection(Vector3.forward).z*throwPower));
+				}
+			}
+
+			if (Input.GetButtonDown("Throw"))
+			{
+				if (ThrowMode == false)
+				{
+					ThrowMode = true;
+					ThrowPredict();
+				}
+			}
 		}
+
+		tempPosition = transform.position;
+		tempRotation = transform.rotation;
 	}
 	
 	void OnCollisionStay(Collision collisionInfo){
@@ -57,5 +116,29 @@ public class HeadBehaviour : MonoBehaviour {
 		}
 	}
 		
-		
+	void ThrowPredict()
+	{
+		newTestBall = Instantiate(testBall);
+		newTestBall.transform.position = transform.position;
+		newTestBall.transform.rotation = transform.rotation;
+		newTestBall.GetComponent<Rigidbody>().isKinematic = false;
+
+		newTestBall.GetComponent<Rigidbody>().AddForce(new Vector3(transform.TransformDirection(Vector3.forward).x*throwPower,1.7f*throwPower,transform.TransformDirection(Vector3.forward).z*throwPower));
+		predictionLine.GetComponent<PredictionLine>().ball = newTestBall;
+		predictionLine.GetComponent<PredictionLine>().active = true;
+
+	}
+
+	void ResetThrowPredict()
+	{
+		if (newTestBall != null)
+		{
+			Destroy(newTestBall);
+			newTestBall = null;
+			predictionLine.GetComponent<LineRenderer>().positionCount = 0;
+			predictionLine.GetComponent<PredictionLine>().positions = new ArrayList();
+			predictionLine.GetComponent<PredictionLine>().ball = null;
+			ThrowPredict();
+		}
+	}
 }
