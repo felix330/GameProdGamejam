@@ -73,6 +73,7 @@ public class HeadBehaviour : MonoBehaviour {
 
 				if (Input.GetButtonDown("Throw"))
 				{
+					transform.parent.gameObject.GetComponent<Body>().headless = true;
 					transform.parent = null;
 					GetComponent<Rigidbody>().isKinematic = false;
 					attachedToBody = false;

@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Body : MonoBehaviour {
 
-	public bool isUsed;
+	public bool isUsed = false;
+	public bool headless = true;
+	public GameObject headPosition;
 	// Use this for initialization
 	void Start () {
-		
+		  Cursor.lockState = CursorLockMode.Locked;
 	}
 
 	//Modifizierter Code aus der Unity Referenz https://docs.unity3d.com/ScriptReference/CharacterController.Move.html
@@ -16,26 +18,41 @@ public class Body : MonoBehaviour {
 	public float gravity;
 	public float rotationSpeed;
 	private Vector3 moveDirection = Vector3.zero;
-	public GameObject headPosition;
+	
 	void Update() {
 		
 		CharacterController controller = GetComponent<CharacterController>();
-		if (controller.isGrounded && isUsed) {
-			moveDirection = new Vector3(0, 0, Input.GetAxis("Vertical"));
-			moveDirection = transform.TransformDirection(moveDirection);
-			moveDirection *= speed;
-			if (Input.GetButton("Jump"))
-				moveDirection.y = jumpSpeed;
-			transform.eulerAngles = new Vector3(transform.eulerAngles.x,transform.eulerAngles.y+Input.GetAxis("Horizontal")*rotationSpeed,transform.eulerAngles.z);
-		}
 		
-		if (controller.isGrounded && !isUsed) {
-			moveDirection = new Vector3(0, 0, Input.GetAxis("Vertical"));
-			moveDirection = transform.TransformDirection(moveDirection);
-			moveDirection *= speed;
-			if (Input.GetButton("Jump"))
-				moveDirection.y = jumpSpeed;
-			transform.eulerAngles = new Vector3(transform.eulerAngles.x,transform.eulerAngles.y+Input.GetAxis("Mouse X")*rotationSpeed,transform.eulerAngles.z);
+		if(controller.isGrounded){
+			if (headless && isUsed) {
+				Debug.Log("Ich werde beobachtet.");
+				moveDirection = new Vector3(0, 0, Input.GetAxis("Vertical"));
+				moveDirection = transform.TransformDirection(moveDirection);
+				moveDirection *= speed;
+				if (Input.GetButton("Jump"))
+					moveDirection.y = jumpSpeed;
+				transform.eulerAngles = new Vector3(transform.eulerAngles.x,transform.eulerAngles.y+Input.GetAxis("Horizontal")*rotationSpeed,transform.eulerAngles.z);
+			}
+			
+			if (!headless && !isUsed) {
+				Debug.Log("Habe meinen Kopf gefunden.");
+				moveDirection = new Vector3(0, 0, Input.GetAxis("Vertical"));
+				moveDirection = transform.TransformDirection(moveDirection);
+				moveDirection *= speed;
+				if (Input.GetButton("Jump"))
+					moveDirection.y = jumpSpeed;
+				
+				if(Input.GetAxis("Horizontal") != 0){
+					transform.eulerAngles = new Vector3(transform.eulerAngles.x,transform.eulerAngles.y+Input.GetAxis("Horizontal")*rotationSpeed,transform.eulerAngles.z);
+				} else {
+					transform.eulerAngles = new Vector3(transform.eulerAngles.x,transform.eulerAngles.y+Input.GetAxis("Mouse X")*rotationSpeed*2,transform.eulerAngles.z);
+				}
+			}
+			
+			if (headless && !isUsed) {
+				Debug.Log("Ich bin kopflos.");
+			}
+			
 		}
 		
 		moveDirection.y -= gravity * Time.deltaTime;
@@ -49,6 +66,7 @@ public class Body : MonoBehaviour {
 			collisionInfo.gameObject.transform.rotation = this.gameObject.transform.rotation;
 			collisionInfo.gameObject.GetComponent<HeadBehaviour>().attachedToBody = true;
 			isUsed = false;
+			headless = false;
 		}
 	}
 }
