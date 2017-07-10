@@ -73,7 +73,7 @@ public class HeadBehaviour : MonoBehaviour {
 
 				if (Input.GetButtonDown("Throw"))
 				{
-					transform.parent.gameObject.GetComponent<Body>().headless = true;
+					transform.parent.parent.gameObject.GetComponent<Body>().headless = true;
 					transform.parent = null;
 					GetComponent<Rigidbody>().isKinematic = false;
 					attachedToBody = false;
@@ -107,7 +107,7 @@ public class HeadBehaviour : MonoBehaviour {
 		
         Debug.DrawRay(transform.position, rayForFocusingOnBody * 15, Color.green);
 
-        if (Physics.Raycast(transform.position, rayForFocusingOnBody, out hit, 50)){
+        if (Physics.Raycast(transform.position, rayForFocusingOnBody, out hit, 100)){
 			if(hit.transform.tag == "Body"){
 				Debug.Log("Körper entdeckt");
 				isFocusedOnBody = true;
