@@ -40,7 +40,7 @@ public class HeadBehaviour : MonoBehaviour {
 			GetComponent<Rigidbody>().isKinematic = false;
 			headRotation = Input.GetAxis("Mouse X") * rotationSpeed * Time.deltaTime;
 			
-			if(!isFocusedOnBody && groundTouching){
+			if(groundTouching){
 				transform.Rotate(Vector3.up * headRotation);
 				if(Input.GetKey(KeyCode.F)){
 					FocusOnBody();
@@ -73,7 +73,7 @@ public class HeadBehaviour : MonoBehaviour {
 
 				if (Input.GetButtonDown("Throw"))
 				{
-					transform.parent = transform.root;
+					transform.parent = null;
 					GetComponent<Rigidbody>().isKinematic = false;
 					attachedToBody = false;
 					GetComponent<Rigidbody>().AddForce(new Vector3(transform.TransformDirection(Vector3.forward).x*throwPower,1.7f*throwPower,transform.TransformDirection(Vector3.forward).z*throwPower));
@@ -104,10 +104,9 @@ public class HeadBehaviour : MonoBehaviour {
 		rayForFocusingOnBody = transform.TransformDirection(Vector3.forward);
 		RaycastHit hit;
 		
-		//Vector3 forward = transform.TransformDirection(Vector3.forward) * 10;
-        Debug.DrawRay(transform.position, rayForFocusingOnBody * 5, Color.green);
+        Debug.DrawRay(transform.position, rayForFocusingOnBody * 15, Color.green);
 
-        if (Physics.Raycast(transform.position, rayForFocusingOnBody, out hit, 5)){
+        if (Physics.Raycast(transform.position, rayForFocusingOnBody, out hit, 50)){
 			if(hit.transform.tag == "Body"){
 				Debug.Log("Körper entdeckt");
 				isFocusedOnBody = true;

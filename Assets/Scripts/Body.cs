@@ -28,6 +28,16 @@ public class Body : MonoBehaviour {
 				moveDirection.y = jumpSpeed;
 			transform.eulerAngles = new Vector3(transform.eulerAngles.x,transform.eulerAngles.y+Input.GetAxis("Horizontal")*rotationSpeed,transform.eulerAngles.z);
 		}
+		
+		if (controller.isGrounded && !isUsed) {
+			moveDirection = new Vector3(0, 0, Input.GetAxis("Vertical"));
+			moveDirection = transform.TransformDirection(moveDirection);
+			moveDirection *= speed;
+			if (Input.GetButton("Jump"))
+				moveDirection.y = jumpSpeed;
+			transform.eulerAngles = new Vector3(transform.eulerAngles.x,transform.eulerAngles.y+Input.GetAxis("Mouse X")*rotationSpeed,transform.eulerAngles.z);
+		}
+		
 		moveDirection.y -= gravity * Time.deltaTime;
 		controller.Move(moveDirection * Time.deltaTime);
 	}
@@ -38,6 +48,7 @@ public class Body : MonoBehaviour {
 			collisionInfo.gameObject.transform.localPosition = Vector3.zero;
 			collisionInfo.gameObject.transform.rotation = this.gameObject.transform.rotation;
 			collisionInfo.gameObject.GetComponent<HeadBehaviour>().attachedToBody = true;
+			isUsed = false;
 		}
 	}
 }
