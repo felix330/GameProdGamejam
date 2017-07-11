@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ThrowBar : MonoBehaviour {
 
-	public GameObject head;
+	//public GameObject throwingObject;
 	private float value;
 	private float currentPower;
 	private float min;
@@ -18,13 +18,17 @@ public class ThrowBar : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (head.GetComponent<HeadBehaviour>().ThrowMode)
+		
+	}
+	
+	public void ChangeScrollbar(GameObject _throwingObject){
+		if (_throwingObject.GetComponent<ThrowableObject>().ThrowMode)
 		{
 			GetComponent<RectTransform>().localScale = Vector2.one;
 			//Scales Throw Power between 1 and 0
-			currentPower = head.GetComponent<HeadBehaviour>().throwPower;
-			max = head.GetComponent<HeadBehaviour>().maxThrowPower;
-			min = head.GetComponent<HeadBehaviour>().minThrowPower;
+			currentPower = _throwingObject.GetComponent<ThrowableObject>().throwPower;
+			max = _throwingObject.GetComponent<ThrowableObject>().maxThrowPower;
+			min = _throwingObject.GetComponent<ThrowableObject>().minThrowPower;
 			value = (currentPower-min)/(max-min);
 			GetComponent<Scrollbar>().value = value;
 		} else {
