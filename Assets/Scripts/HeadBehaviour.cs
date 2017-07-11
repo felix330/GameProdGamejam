@@ -49,6 +49,7 @@ public class HeadBehaviour : MonoBehaviour {
 			predictionLine.GetComponent<LineRenderer>().positionCount = 0;
 			predictionLine.GetComponent<PredictionLine>().positions = new ArrayList();
 			predictionLine.GetComponent<PredictionLine>().ball = null;
+			ThrowMode = false;
 			
 			if(groundTouching){
 				transform.Rotate(Vector3.up *  headRotationX);
