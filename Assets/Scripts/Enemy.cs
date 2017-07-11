@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(CapsuleCollider))]
 public class Enemy : MonoBehaviour {
 
 	private GameObject ThrowObj;
@@ -58,6 +60,7 @@ public class Enemy : MonoBehaviour {
 		}
 	}
 
+	//Take the head and throw it into direction
 	void PickUpHead()
 	{
 		Debug.Log("Picking up Head");

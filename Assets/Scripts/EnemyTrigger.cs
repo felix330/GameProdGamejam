@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Trigger for enemy to find objects
 public class EnemyTrigger : MonoBehaviour {
 
 	// Use this for initialization

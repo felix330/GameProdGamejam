@@ -14,7 +14,7 @@ public class Body : MonoBehaviour {
 		  Cursor.lockState = CursorLockMode.Locked;
 	}
 
-	//Modifizierter Code aus der Unity Referenz https://docs.unity3d.com/ScriptReference/CharacterController.Move.html
+	//Enthält modifizierten Code aus der Unity Referenz https://docs.unity3d.com/ScriptReference/CharacterController.Move.html
 	public float speed;
 	public float jumpSpeed;
 	public float gravity;
@@ -47,11 +47,7 @@ public class Body : MonoBehaviour {
 				if(Input.GetAxis("Horizontal") != 0){
 					transform.eulerAngles = new Vector3(transform.eulerAngles.x,transform.eulerAngles.y+Input.GetAxis("Horizontal")*rotationSpeed,transform.eulerAngles.z);
 				} else {
-					/*if(transform.eulerAngles.x > maxRotation){
-						transform.eulerAngles = new Vector3(maxRotation,transform.eulerAngles.y,transform.eulerAngles.z);
-					}else if(transform.eulerAngles.x < minRotation){
-						transform.eulerAngles = new Vector3(minRotation,transform.eulerAngles.y,transform.eulerAngles.z);
-					}*/
+					
 					
 					transform.eulerAngles = new Vector3(transform.eulerAngles.x/*+Input.GetAxis("Mouse Y")*rotationSpeed*2*/,transform.eulerAngles.y+Input.GetAxis("Mouse X")*rotationSpeed*2,transform.eulerAngles.z);
 				}
@@ -67,6 +63,7 @@ public class Body : MonoBehaviour {
 		controller.Move(moveDirection * Time.deltaTime);
 	}
 
+	//Collect objects
 	void OnControllerColliderHit(ControllerColliderHit collisionInfo){
 		if(collisionInfo.gameObject.tag == "ThrowableObject" && !gotAnObject){
 			gotAnObject = true;

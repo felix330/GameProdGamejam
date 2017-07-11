@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Base Class for Objects which can be thrown, like Heads, Boxes etc
 public class ThrowableObject : MonoBehaviour {
 	public bool groundTouching = false;
 	public bool attachedToBody;

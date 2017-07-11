@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Head class, requires ThrowableObject component
+[RequireComponent(typeof(ThrowableObject))]
 public class HeadBehaviour : MonoBehaviour {
 	public bool groundTouching = false;
 	public bool isFocusedOnBody = false;
@@ -11,27 +13,13 @@ public class HeadBehaviour : MonoBehaviour {
 	private float rotationSpeed = 180;
 	private Vector3 rayForFocusingOnBody;
 	public bool attachedToBody;
-	//public GameObject testBall;
-	//public GameObject predictionLine;
 	public GameObject laserPoint;
 
-	//public float throwPower;
-	//public float maxThrowPower, minThrowPower;
-
-	//private Vector3 tempPosition;
-	//private Quaternion tempRotation;
-
-	//private GameObject newTestBall;
 	private GameObject newLaserPoint;
-
-	//public bool ThrowMode;
 	private bool laserCreated;
 	
 	// Use this for initialization
 	void Start () {
-		/*throwPower = 400f;
-		tempPosition = transform.position;
-		tempRotation = transform.rotation;*/
 	}
 	
 	// Update is called once per frame
@@ -42,16 +30,9 @@ public class HeadBehaviour : MonoBehaviour {
 		transform.Rotate(Vector3.right * headRotationY);
 		if (!attachedToBody)
 		{
-			
-			/*GetComponent<MeshCollider>().enabled = true;
-			GetComponent<Rigidbody>().isKinematic = false;*/
+			//X Rotation only works without a body, otherwise turns body
 			headRotationX = Input.GetAxis("Mouse X") * rotationSpeed * Time.deltaTime;
 
-			/*predictionLine.GetComponent<LineRenderer>().positionCount = 0;
-			predictionLine.GetComponent<PredictionLine>().positions = new ArrayList();
-			predictionLine.GetComponent<PredictionLine>().ball = null;
-			ThrowMode = false;*/
-			
 			if(groundTouching){
 				transform.Rotate(Vector3.up *  headRotationX);
 				if(Input.GetKey(KeyCode.F)){
@@ -61,70 +42,19 @@ public class HeadBehaviour : MonoBehaviour {
 					}
 					FocusOnBody();
 				}
-				
 				if(Input.GetKeyUp(KeyCode.F)){
 					Destroy(newLaserPoint);
 					newLaserPoint = null;
 					laserCreated = false;
 				}
 			}
-			
-			
 		} else {
-			/*GetComponent<Rigidbody>().isKinematic = true;
-			GetComponent<MeshCollider>().enabled = false;*/
-
-			//float tempThrowPower = throwPower;
 			if(laserCreated){
 				Destroy(newLaserPoint);
 				newLaserPoint = null;
 				laserCreated = false;
 			}
-
-			/*if (ThrowMode)
-			{
-				if(Input.GetAxis("Distance")>0 && throwPower < maxThrowPower)
-				{
-					throwPower += 0.5f;
-				}
-
-				if(Input.GetAxis("Distance")<0 && throwPower > minThrowPower)
-				{
-					throwPower -= 0.5f;
-				}
-
-				if (tempThrowPower != throwPower || transform.position != tempPosition || transform.rotation != tempRotation)
-				{
-					ResetThrowPredict();
-				}
-
-				if (Input.GetButtonDown("Throw"))
-				{
-					transform.parent.parent.gameObject.GetComponent<Body>().headless = true;
-					transform.parent = null;
-					GetComponent<Rigidbody>().isKinematic = false;
-					attachedToBody = false;
-					ThrowMode = false;
-					GetComponent<Rigidbody>().AddForce(new Vector3(transform.TransformDirection(Vector3.forward).x*throwPower,1.7f*throwPower,transform.TransformDirection(Vector3.forward).z*throwPower));
-				}
-			} else {
-
-			}
-
-			if (Input.GetButtonDown("Throw"))
-			{
-				if (ThrowMode == false)
-				{
-					ThrowMode = true;
-					ThrowPredict();
-				}
-			}
 				
-		}
-
-		tempPosition = transform.position;
-		tempRotation = transform.rotation;*/
-		
 		}
 	}
 	
@@ -133,8 +63,10 @@ public class HeadBehaviour : MonoBehaviour {
 			groundTouching = true;
 		}
 	}
-	
+
+
 	void FocusOnBody(){
+		//Throw a Raycast in Z direction and watch for bodies to be selected
 		rayForFocusingOnBody = transform.TransformDirection(Vector3.forward);
 		RaycastHit hit;
 		
@@ -150,29 +82,4 @@ public class HeadBehaviour : MonoBehaviour {
 		}
 	}
 		
-/*	void ThrowPredict()
-	{
-		newTestBall = Instantiate(testBall);
-		newTestBall.transform.position = transform.position;
-		newTestBall.transform.rotation = transform.rotation;
-		newTestBall.GetComponent<Rigidbody>().isKinematic = false;
-
-		newTestBall.GetComponent<Rigidbody>().AddForce(new Vector3(transform.TransformDirection(Vector3.forward).x*throwPower,1.7f*throwPower,transform.TransformDirection(Vector3.forward).z*throwPower));
-		predictionLine.GetComponent<PredictionLine>().ball = newTestBall;
-		predictionLine.GetComponent<PredictionLine>().active = true;
-
-	}
-
-	void ResetThrowPredict()
-	{
-		if (newTestBall != null)
-		{
-			Destroy(newTestBall);
-			newTestBall = null;
-			predictionLine.GetComponent<LineRenderer>().positionCount = 0;
-			predictionLine.GetComponent<PredictionLine>().positions = new ArrayList();
-			predictionLine.GetComponent<PredictionLine>().ball = null;
-			ThrowPredict();
-		}
-	}*/
 }

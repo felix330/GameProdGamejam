@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//UI element which shows Throw Power
 public class ThrowBar : MonoBehaviour {
 
-	//public GameObject throwingObject;
 	private float value;
 	private float currentPower;
 	private float min;
