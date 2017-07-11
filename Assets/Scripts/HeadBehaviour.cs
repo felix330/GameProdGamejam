@@ -15,7 +15,7 @@ public class HeadBehaviour : MonoBehaviour {
 	public GameObject predictionLine;
 	public GameObject laserPoint;
 
-	private float throwPower;
+	public float throwPower;
 	public float maxThrowPower, minThrowPower;
 
 	private Vector3 tempPosition;
@@ -24,7 +24,7 @@ public class HeadBehaviour : MonoBehaviour {
 	private GameObject newTestBall;
 	private GameObject newLaserPoint;
 
-	private bool ThrowMode;
+	public bool ThrowMode;
 	private bool laserCreated;
 	
 	// Use this for initialization
@@ -49,6 +49,7 @@ public class HeadBehaviour : MonoBehaviour {
 			predictionLine.GetComponent<LineRenderer>().positionCount = 0;
 			predictionLine.GetComponent<PredictionLine>().positions = new ArrayList();
 			predictionLine.GetComponent<PredictionLine>().ball = null;
+			ThrowMode = false;
 			
 			if(groundTouching){
 				transform.Rotate(Vector3.up *  headRotationX);
@@ -85,12 +86,12 @@ public class HeadBehaviour : MonoBehaviour {
 			{
 				if(Input.GetAxis("Distance")>0 && throwPower < maxThrowPower)
 				{
-					throwPower += 0.2f;
+					throwPower += 0.5f;
 				}
 
 				if(Input.GetAxis("Distance")<0 && throwPower > minThrowPower)
 				{
-					throwPower -= 0.2f;
+					throwPower -= 0.5f;
 				}
 
 				if (tempThrowPower != throwPower || transform.position != tempPosition || transform.rotation != tempRotation)
