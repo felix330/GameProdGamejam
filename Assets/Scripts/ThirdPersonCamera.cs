@@ -19,6 +19,7 @@ public class ThirdPersonCamera : MonoBehaviour {
 		bodyPosition = myTargetBody.position;
 		
 		if(myTargetHead.GetComponent<HeadBehaviour>().attachedToBody){
+			myTargetBody = myTargetHead.transform.parent.parent;
 			transform.LookAt(myTargetBody);
 			transform.position = new Vector3(bodyPosition.x+7, bodyPosition.y+2, bodyPosition.z-5.35f);
 		} else {

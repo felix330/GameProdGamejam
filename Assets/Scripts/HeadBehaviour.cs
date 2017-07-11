@@ -42,6 +42,10 @@ public class HeadBehaviour : MonoBehaviour {
 			GetComponent<Rigidbody>().isKinematic = false;
 			headRotationX = Input.GetAxis("Mouse X") * rotationSpeed * Time.deltaTime;
 			//headRotationY = Input.GetAxis("Mouse Y") * rotationSpeed * Time.deltaTime;
+
+			predictionLine.GetComponent<LineRenderer>().positionCount = 0;
+			predictionLine.GetComponent<PredictionLine>().positions = new ArrayList();
+			predictionLine.GetComponent<PredictionLine>().ball = null;
 			
 			if(groundTouching){
 				transform.Rotate(Vector3.up *  headRotationX);
@@ -86,6 +90,8 @@ public class HeadBehaviour : MonoBehaviour {
 					ThrowMode = false;
 					GetComponent<Rigidbody>().AddForce(new Vector3(transform.TransformDirection(Vector3.forward).x*throwPower,1.7f*throwPower,transform.TransformDirection(Vector3.forward).z*throwPower));
 				}
+			} else {
+
 			}
 
 			if (Input.GetButtonDown("Throw"))
@@ -96,6 +102,7 @@ public class HeadBehaviour : MonoBehaviour {
 					ThrowPredict();
 				}
 			}
+				
 		}
 
 		tempPosition = transform.position;

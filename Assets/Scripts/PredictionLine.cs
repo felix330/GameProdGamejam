@@ -22,7 +22,7 @@ public class PredictionLine : MonoBehaviour {
 		{
 			counter++;
 
-			if (!Physics.Raycast(ball.transform.position,Vector3.down,0.6f) && counter > 10)
+			if (ball != null && !Physics.Raycast(ball.transform.position,Vector3.down,0.6f) && counter > 10)
 			{
 				positions.Add(ball.transform.position);
 				drawLines();
