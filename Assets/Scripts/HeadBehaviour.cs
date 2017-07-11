@@ -13,6 +13,7 @@ public class HeadBehaviour : MonoBehaviour {
 	public bool attachedToBody;
 	public GameObject testBall;
 	public GameObject predictionLine;
+	public GameObject laserPoint;
 
 	private float throwPower;
 	public float maxThrowPower, minThrowPower;
@@ -21,8 +22,10 @@ public class HeadBehaviour : MonoBehaviour {
 	private Quaternion tempRotation;
 
 	private GameObject newTestBall;
+	private GameObject newLaserPoint;
 
 	private bool ThrowMode;
+	private bool laserCreated;
 	
 	// Use this for initialization
 	void Start () {
@@ -51,7 +54,17 @@ public class HeadBehaviour : MonoBehaviour {
 				transform.Rotate(Vector3.up *  headRotationX);
 				//transform.Rotate(Vector3.right * headRotationY);
 				if(Input.GetKey(KeyCode.F)){
+					if(!laserCreated){
+						newLaserPoint = Instantiate(laserPoint);
+						laserCreated = true;
+					}
 					FocusOnBody();
+				}
+				
+				if(Input.GetKeyUp(KeyCode.F)){
+					Destroy(newLaserPoint);
+					newLaserPoint = null;
+					laserCreated = false;
 				}
 			}
 			
@@ -62,7 +75,11 @@ public class HeadBehaviour : MonoBehaviour {
 
 			float tempThrowPower = throwPower;
 
-
+			if(laserCreated){
+				Destroy(newLaserPoint);
+				newLaserPoint = null;
+				laserCreated = false;
+			}
 
 			if (ThrowMode)
 			{
@@ -122,6 +139,7 @@ public class HeadBehaviour : MonoBehaviour {
         Debug.DrawRay(transform.position, rayForFocusingOnBody * 1000, Color.green);
 
         if (Physics.Raycast(transform.position, rayForFocusingOnBody, out hit, 1000)){
+			newLaserPoint.transform.position = hit.point;
 			if(hit.transform.tag == "Body"){
 				Debug.Log("Körper entdeckt");
 				isFocusedOnBody = true;
