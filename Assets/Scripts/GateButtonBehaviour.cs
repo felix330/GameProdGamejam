@@ -20,7 +20,7 @@ public class GateButtonBehaviour : MonoBehaviour {
 			//Debug.Log(collisionInfo.gameObject.name);
 			foreach(string key in gateKeys){
 				foreach(GameObject gate in gates){
-					Debug.Log(key + " + " + gate);
+					//Debug.Log(key + " + " + gate);
 					gate.GetComponent<GateBehaviour>().SendMessage("OpenGate", key);
 				}
 			}

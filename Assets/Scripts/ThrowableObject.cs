@@ -15,7 +15,8 @@ public class ThrowableObject : MonoBehaviour {
 	private Quaternion tempRotation;
 
 	private GameObject newTestBall;
-	private ThrowBar scrollbarScript; 
+	private ThrowBar scrollbarScript;
+	
 
 	public bool ThrowMode;
 	
@@ -57,6 +58,7 @@ public class ThrowableObject : MonoBehaviour {
 
 				if (tempThrowPower != throwPower || transform.position != tempPosition || transform.rotation != tempRotation)
 				{
+					Debug.Log("tempThrowPower: " + tempThrowPower);
 					ResetThrowPredict();
 				}
 
@@ -64,11 +66,13 @@ public class ThrowableObject : MonoBehaviour {
 				{
 					if(gameObject.name == "Head"){
 						transform.parent.parent.gameObject.GetComponent<Body>().headless = true;
+						GetComponent<HeadBehaviour>().attachedToBody = false; 
 					}
 					transform.parent.parent.gameObject.GetComponent<Body>().gotAnObject = false;
 					transform.parent = null;
 					GetComponent<Rigidbody>().isKinematic = false;
 					attachedToBody = false;
+
 					ThrowMode = false;
 					GetComponent<Rigidbody>().AddForce(new Vector3(transform.TransformDirection(Vector3.forward).x*throwPower,1.7f*throwPower,transform.TransformDirection(Vector3.forward).z*throwPower));
 				}
@@ -91,6 +95,7 @@ public class ThrowableObject : MonoBehaviour {
 			{
 				if(gameObject.name == "Head"){
 					transform.parent.parent.gameObject.GetComponent<Body>().headless = true;
+					GetComponent<HeadBehaviour>().attachedToBody = false; 
 				}
 				transform.parent.parent.gameObject.GetComponent<Body>().gotAnObject = false;
 				transform.parent = null;
