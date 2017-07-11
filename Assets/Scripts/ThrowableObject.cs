@@ -86,6 +86,19 @@ public class ThrowableObject : MonoBehaviour {
 					ThrowPredict();
 				}
 			}
+			
+			if (Input.GetKeyDown(KeyCode.Q))
+			{
+				if(gameObject.name == "Head"){
+					transform.parent.parent.gameObject.GetComponent<Body>().headless = true;
+				}
+				transform.parent.parent.gameObject.GetComponent<Body>().gotAnObject = false;
+				transform.parent = null;
+				GetComponent<Rigidbody>().isKinematic = false;
+				attachedToBody = false;
+				ThrowMode = false;
+				GetComponent<Rigidbody>().AddForce(new Vector3(transform.TransformDirection(Vector3.forward).x,1.7f,transform.TransformDirection(Vector3.forward).z));
+			}
 				
 		}
 
