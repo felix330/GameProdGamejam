@@ -72,8 +72,9 @@ public class Body : MonoBehaviour {
 			gotAnObject = true;
 			collisionInfo.gameObject.transform.parent = headPosition.transform;
 			collisionInfo.gameObject.transform.localPosition = Vector3.zero;
-			collisionInfo.gameObject.transform.rotation = this.gameObject.transform.rotation;
+			collisionInfo.gameObject.transform.rotation = headPosition.transform.rotation;
 			collisionInfo.gameObject.GetComponent<ThrowableObject>().attachedToBody = true;
+			collisionInfo.gameObject.GetComponent<HeadBehaviour>().attachedToBody = true;
 			isUsed = false;
 			headless = false;
 		}

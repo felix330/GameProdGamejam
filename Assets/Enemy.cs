@@ -24,11 +24,11 @@ public class Enemy : MonoBehaviour {
 	void Update () {
 		//Only follow stray heads
 		Vector3 moveDirection = new Vector3();
-		if (head != null && !head.GetComponent<HeadBehaviour>().attachedToBody && head.GetComponent<HeadBehaviour>().groundTouching)
+		if (inPursuit && head != null && !head.GetComponent<HeadBehaviour>().attachedToBody && head.GetComponent<HeadBehaviour>().groundTouching)
 		{
-			moveDirection = head.transform.position;
+			moveDirection = Vector3.MoveTowards(transform.position,head.transform.position,2f)-transform.position;
 		} else {
-			moveDirection = basePosition;
+			moveDirection = Vector3.MoveTowards(transform.position,basePosition,2f)-transform.position;
 		}
 
 		moveDirection.y -= gravity * Time.deltaTime;
@@ -44,5 +44,6 @@ public class Enemy : MonoBehaviour {
 
 	void HeadGone (GameObject h) {
 		Debug.Log("Head is gone!");
+		inPursuit = false;
 	}
 }

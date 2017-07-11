@@ -36,11 +36,12 @@ public class HeadBehaviour : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
 		headRotationY = Input.GetAxis("Mouse Y") * rotationSpeed * Time.deltaTime;
 		transform.Rotate(Vector3.right * headRotationY);
 		if (!attachedToBody)
 		{
-
+			
 			/*GetComponent<MeshCollider>().enabled = true;
 			GetComponent<Rigidbody>().isKinematic = false;*/
 			headRotationX = Input.GetAxis("Mouse X") * rotationSpeed * Time.deltaTime;
@@ -73,7 +74,6 @@ public class HeadBehaviour : MonoBehaviour {
 			GetComponent<MeshCollider>().enabled = false;*/
 
 			//float tempThrowPower = throwPower;
-
 			if(laserCreated){
 				Destroy(newLaserPoint);
 				newLaserPoint = null;
