@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
 
-	private GameObject head;
+	private GameObject ThrowObj;
 
 	private Vector3 basePosition;
 	private Quaternion baseRotation;
 
 	private CharacterController controller;
 	public float gravity;
+	public GameObject headPosition;
 
 	private bool inPursuit;
 	// Use this for initialization
@@ -24,9 +25,9 @@ public class Enemy : MonoBehaviour {
 	void Update () {
 		//Only follow stray heads
 		Vector3 moveDirection = new Vector3();
-		if (inPursuit && head != null && !head.GetComponent<HeadBehaviour>().attachedToBody && head.GetComponent<HeadBehaviour>().groundTouching)
+		if (inPursuit && ThrowObj != null && !ThrowObj.GetComponent<HeadBehaviour>().attachedToBody && ThrowObj.GetComponent<HeadBehaviour>().groundTouching)
 		{
-			moveDirection = Vector3.MoveTowards(transform.position,head.transform.position,2f)-transform.position;
+			moveDirection = Vector3.MoveTowards(transform.position,ThrowObj.transform.position,2f)-transform.position;
 		} else {
 			moveDirection = Vector3.MoveTowards(transform.position,basePosition,2f)-transform.position;
 		}
@@ -36,14 +37,29 @@ public class Enemy : MonoBehaviour {
 	}
 
 	//message receivers
-	void HeadFound (GameObject h) {
+	void ThrowableObjectFound (GameObject h) {
 		Debug.Log("Found a head");
-		head = h;
+		ThrowObj = h;
 		inPursuit = true;
 	}
 
-	void HeadGone (GameObject h) {
+	void ThrowableObjectGone (GameObject h) {
 		Debug.Log("Head is gone!");
 		inPursuit = false;
+	}
+
+	void OnCollisionEnter(Collision c) {
+		if (c.gameObject.tag == "ThrowableObject" && !ThrowObj.GetComponent<HeadBehaviour>().attachedToBody)
+		{
+			PickUpHead();
+		}
+	}
+
+	void PickUpHead()
+	{
+		Debug.Log("Picking up Head");
+		ThrowObj.transform.parent = headPosition.transform;
+		ThrowObj.gameObject.transform.localPosition = Vector3.zero;
+		ThrowObj.gameObject.transform.rotation = headPosition.transform.rotation;
 	}
 }

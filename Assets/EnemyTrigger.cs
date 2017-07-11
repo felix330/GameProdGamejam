@@ -16,17 +16,17 @@ public class EnemyTrigger : MonoBehaviour {
 
 	void OnTriggerEnter (Collider c)
 	{
-		if (c.gameObject.tag == "Head")
+		if (c.gameObject.tag == "ThrowableObject")
 		{
-			transform.parent.SendMessage("HeadFound",c.gameObject);
+			transform.parent.SendMessage("ThrowableObjectFound",c.gameObject);
 		}
 	}
 
 	void OnTriggerExit (Collider c)
 	{
-		if (c.gameObject.tag == "Head")
+		if (c.gameObject.tag == "ThrowableObject")
 		{
-			transform.parent.SendMessage("HeadGone",c.gameObject);
+			transform.parent.SendMessage("ThrowableObjectGone",c.gameObject);
 		}
 	}
 }
