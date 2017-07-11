@@ -7,6 +7,7 @@ public class Body : MonoBehaviour {
 	public bool isUsed = false;
 	public bool headless = true;
 	public GameObject headPosition;
+	public float maxRotation, minRotation;
 	// Use this for initialization
 	void Start () {
 		  Cursor.lockState = CursorLockMode.Locked;
@@ -25,7 +26,7 @@ public class Body : MonoBehaviour {
 		
 		if(controller.isGrounded){
 			if (headless && isUsed) {
-				Debug.Log("Ich werde beobachtet.");
+				//Debug.Log("Ich werde beobachtet.");
 				moveDirection = new Vector3(0, 0, Input.GetAxis("Vertical"));
 				moveDirection = transform.TransformDirection(moveDirection);
 				moveDirection *= speed;
@@ -35,7 +36,7 @@ public class Body : MonoBehaviour {
 			}
 			
 			if (!headless && !isUsed) {
-				Debug.Log("Habe meinen Kopf gefunden.");
+				//Debug.Log("Habe meinen Kopf gefunden.");
 				moveDirection = new Vector3(0, 0, Input.GetAxis("Vertical"));
 				moveDirection = transform.TransformDirection(moveDirection);
 				moveDirection *= speed;
@@ -45,12 +46,18 @@ public class Body : MonoBehaviour {
 				if(Input.GetAxis("Horizontal") != 0){
 					transform.eulerAngles = new Vector3(transform.eulerAngles.x,transform.eulerAngles.y+Input.GetAxis("Horizontal")*rotationSpeed,transform.eulerAngles.z);
 				} else {
-					transform.eulerAngles = new Vector3(transform.eulerAngles.x,transform.eulerAngles.y+Input.GetAxis("Mouse X")*rotationSpeed*2,transform.eulerAngles.z);
+					/*if(transform.eulerAngles.x > maxRotation){
+						transform.eulerAngles = new Vector3(maxRotation,transform.eulerAngles.y,transform.eulerAngles.z);
+					}else if(transform.eulerAngles.x < minRotation){
+						transform.eulerAngles = new Vector3(minRotation,transform.eulerAngles.y,transform.eulerAngles.z);
+					}*/
+					
+					transform.eulerAngles = new Vector3(transform.eulerAngles.x/*+Input.GetAxis("Mouse Y")*rotationSpeed*2*/,transform.eulerAngles.y+Input.GetAxis("Mouse X")*rotationSpeed*2,transform.eulerAngles.z);
 				}
 			}
 			
 			if (headless && !isUsed) {
-				Debug.Log("Ich bin kopflos.");
+				//Debug.Log("Ich bin kopflos.");
 			}
 			
 		}

@@ -6,7 +6,8 @@ public class HeadBehaviour : MonoBehaviour {
 	public bool groundTouching = false;
 	public bool isFocusedOnBody = false;
 	
-	private float headRotation;
+	private float headRotationX;
+	private float headRotationY;
 	private float rotationSpeed = 180;
 	private Vector3 rayForFocusingOnBody;
 	public bool attachedToBody;
@@ -32,23 +33,28 @@ public class HeadBehaviour : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		headRotationY = Input.GetAxis("Mouse Y") * rotationSpeed * Time.deltaTime;
+		transform.Rotate(Vector3.right * headRotationY);
 		if (!attachedToBody)
 		{
 
-			GetComponent<SphereCollider>().enabled = true;
+			GetComponent<MeshCollider>().enabled = true;
 			GetComponent<Rigidbody>().isKinematic = false;
-			headRotation = Input.GetAxis("Mouse X") * rotationSpeed * Time.deltaTime;
+			headRotationX = Input.GetAxis("Mouse X") * rotationSpeed * Time.deltaTime;
+			//headRotationY = Input.GetAxis("Mouse Y") * rotationSpeed * Time.deltaTime;
 			
 			if(groundTouching){
-				transform.Rotate(Vector3.up * headRotation);
+				transform.Rotate(Vector3.up *  headRotationX);
+				//transform.Rotate(Vector3.right * headRotationY);
 				if(Input.GetKey(KeyCode.F)){
 					FocusOnBody();
 				}
 			}
+			
+			
 		} else {
 			GetComponent<Rigidbody>().isKinematic = true;
-			GetComponent<SphereCollider>().enabled = false;
+			GetComponent<MeshCollider>().enabled = false;
 
 			float tempThrowPower = throwPower;
 
@@ -77,6 +83,7 @@ public class HeadBehaviour : MonoBehaviour {
 					transform.parent = null;
 					GetComponent<Rigidbody>().isKinematic = false;
 					attachedToBody = false;
+					ThrowMode = false;
 					GetComponent<Rigidbody>().AddForce(new Vector3(transform.TransformDirection(Vector3.forward).x*throwPower,1.7f*throwPower,transform.TransformDirection(Vector3.forward).z*throwPower));
 				}
 			}
@@ -105,9 +112,9 @@ public class HeadBehaviour : MonoBehaviour {
 		rayForFocusingOnBody = transform.TransformDirection(Vector3.forward);
 		RaycastHit hit;
 		
-        Debug.DrawRay(transform.position, rayForFocusingOnBody * 15, Color.green);
+        Debug.DrawRay(transform.position, rayForFocusingOnBody * 1000, Color.green);
 
-        if (Physics.Raycast(transform.position, rayForFocusingOnBody, out hit, 100)){
+        if (Physics.Raycast(transform.position, rayForFocusingOnBody, out hit, 1000)){
 			if(hit.transform.tag == "Body"){
 				Debug.Log("Körper entdeckt");
 				isFocusedOnBody = true;
