@@ -11,27 +11,27 @@ public class HeadBehaviour : MonoBehaviour {
 	private float rotationSpeed = 180;
 	private Vector3 rayForFocusingOnBody;
 	public bool attachedToBody;
-	public GameObject testBall;
-	public GameObject predictionLine;
+	//public GameObject testBall;
+	//public GameObject predictionLine;
 	public GameObject laserPoint;
 
-	public float throwPower;
-	public float maxThrowPower, minThrowPower;
+	//public float throwPower;
+	//public float maxThrowPower, minThrowPower;
 
-	private Vector3 tempPosition;
-	private Quaternion tempRotation;
+	//private Vector3 tempPosition;
+	//private Quaternion tempRotation;
 
-	private GameObject newTestBall;
+	//private GameObject newTestBall;
 	private GameObject newLaserPoint;
 
-	public bool ThrowMode;
+	//public bool ThrowMode;
 	private bool laserCreated;
 	
 	// Use this for initialization
 	void Start () {
-		throwPower = 400f;
+		/*throwPower = 400f;
 		tempPosition = transform.position;
-		tempRotation = transform.rotation;
+		tempRotation = transform.rotation;*/
 	}
 	
 	// Update is called once per frame
@@ -41,19 +41,17 @@ public class HeadBehaviour : MonoBehaviour {
 		if (!attachedToBody)
 		{
 
-			GetComponent<MeshCollider>().enabled = true;
-			GetComponent<Rigidbody>().isKinematic = false;
+			/*GetComponent<MeshCollider>().enabled = true;
+			GetComponent<Rigidbody>().isKinematic = false;*/
 			headRotationX = Input.GetAxis("Mouse X") * rotationSpeed * Time.deltaTime;
-			//headRotationY = Input.GetAxis("Mouse Y") * rotationSpeed * Time.deltaTime;
 
-			predictionLine.GetComponent<LineRenderer>().positionCount = 0;
+			/*predictionLine.GetComponent<LineRenderer>().positionCount = 0;
 			predictionLine.GetComponent<PredictionLine>().positions = new ArrayList();
 			predictionLine.GetComponent<PredictionLine>().ball = null;
-			ThrowMode = false;
+			ThrowMode = false;*/
 			
 			if(groundTouching){
 				transform.Rotate(Vector3.up *  headRotationX);
-				//transform.Rotate(Vector3.right * headRotationY);
 				if(Input.GetKey(KeyCode.F)){
 					if(!laserCreated){
 						newLaserPoint = Instantiate(laserPoint);
@@ -71,10 +69,10 @@ public class HeadBehaviour : MonoBehaviour {
 			
 			
 		} else {
-			GetComponent<Rigidbody>().isKinematic = true;
-			GetComponent<MeshCollider>().enabled = false;
+			/*GetComponent<Rigidbody>().isKinematic = true;
+			GetComponent<MeshCollider>().enabled = false;*/
 
-			float tempThrowPower = throwPower;
+			//float tempThrowPower = throwPower;
 
 			if(laserCreated){
 				Destroy(newLaserPoint);
@@ -82,7 +80,7 @@ public class HeadBehaviour : MonoBehaviour {
 				laserCreated = false;
 			}
 
-			if (ThrowMode)
+			/*if (ThrowMode)
 			{
 				if(Input.GetAxis("Distance")>0 && throwPower < maxThrowPower)
 				{
@@ -124,7 +122,9 @@ public class HeadBehaviour : MonoBehaviour {
 		}
 
 		tempPosition = transform.position;
-		tempRotation = transform.rotation;
+		tempRotation = transform.rotation;*/
+		
+		}
 	}
 	
 	void OnCollisionStay(Collision collisionInfo){
@@ -149,7 +149,7 @@ public class HeadBehaviour : MonoBehaviour {
 		}
 	}
 		
-	void ThrowPredict()
+/*	void ThrowPredict()
 	{
 		newTestBall = Instantiate(testBall);
 		newTestBall.transform.position = transform.position;
@@ -173,5 +173,5 @@ public class HeadBehaviour : MonoBehaviour {
 			predictionLine.GetComponent<PredictionLine>().ball = null;
 			ThrowPredict();
 		}
-	}
+	}*/
 }

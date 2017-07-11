@@ -6,6 +6,7 @@ public class Body : MonoBehaviour {
 
 	public bool isUsed = false;
 	public bool headless = true;
+	public bool gotAnObject = false;
 	public GameObject headPosition;
 	public float maxRotation, minRotation;
 	// Use this for initialization
@@ -67,11 +68,12 @@ public class Body : MonoBehaviour {
 	}
 
 	void OnControllerColliderHit(ControllerColliderHit collisionInfo){
-		if(collisionInfo.gameObject.name == "Head"){
+		if(collisionInfo.gameObject.tag == "ThrowableObject" && !gotAnObject){
+			gotAnObject = true;
 			collisionInfo.gameObject.transform.parent = headPosition.transform;
 			collisionInfo.gameObject.transform.localPosition = Vector3.zero;
 			collisionInfo.gameObject.transform.rotation = this.gameObject.transform.rotation;
-			collisionInfo.gameObject.GetComponent<HeadBehaviour>().attachedToBody = true;
+			collisionInfo.gameObject.GetComponent<ThrowableObject>().attachedToBody = true;
 			isUsed = false;
 			headless = false;
 		}
