@@ -86,12 +86,12 @@ public class HeadBehaviour : MonoBehaviour {
 			{
 				if(Input.GetAxis("Distance")>0 && throwPower < maxThrowPower)
 				{
-					throwPower += 0.2f;
+					throwPower += 0.5f;
 				}
 
 				if(Input.GetAxis("Distance")<0 && throwPower > minThrowPower)
 				{
-					throwPower -= 0.2f;
+					throwPower -= 0.5f;
 				}
 
 				if (tempThrowPower != throwPower || transform.position != tempPosition || transform.rotation != tempRotation)
