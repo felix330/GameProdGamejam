@@ -15,7 +15,7 @@ public class HeadBehaviour : MonoBehaviour {
 	public GameObject predictionLine;
 	public GameObject laserPoint;
 
-	private float throwPower;
+	public float throwPower;
 	public float maxThrowPower, minThrowPower;
 
 	private Vector3 tempPosition;
@@ -24,7 +24,7 @@ public class HeadBehaviour : MonoBehaviour {
 	private GameObject newTestBall;
 	private GameObject newLaserPoint;
 
-	private bool ThrowMode;
+	public bool ThrowMode;
 	private bool laserCreated;
 	
 	// Use this for initialization
