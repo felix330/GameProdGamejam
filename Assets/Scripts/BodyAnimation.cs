@@ -35,10 +35,22 @@ public class BodyAnimation : MonoBehaviour {
 	}
 
 	void ReceiveThrow() {
-		animator.SetTrigger("Throw");
+		animator.SetTrigger("Thrown");
 	}
 
 	void ReceivePickUp() {
 		animator.SetTrigger("PickUpStart");
+	}
+
+	void PickUpStart()
+	{
+		Debug.Log("Pickup start");
+		SendMessageUpwards("PickUpAttach");
+	}
+
+	void HoldUpDone()
+	{
+		Debug.Log("Hold up done");
+		SendMessageUpwards("HoldUpAttach");
 	}
 }

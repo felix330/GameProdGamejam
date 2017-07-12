@@ -67,6 +67,7 @@ public class ThrowableObject : MonoBehaviour {
 						transform.parent.parent.gameObject.GetComponent<Body>().headless = true;
 					}
 					transform.parent.parent.gameObject.GetComponent<Body>().gotAnObject = false;
+					transform.parent.parent.BroadcastMessage("ReceiveThrow");
 					transform.parent = null;
 					GetComponent<Rigidbody>().isKinematic = false;
 					attachedToBody = false;
@@ -137,7 +138,7 @@ public class ThrowableObject : MonoBehaviour {
 
 	void GetThrown(Vector3 v)
 	{
-		BroadcastMessage("ReceiveThrow");
+		
 		Debug.Log("ThrowStrength" + v);
 		GetComponent<Rigidbody>().AddForce(v);
 	}
