@@ -48,12 +48,12 @@ public class ThrowableObject : MonoBehaviour {
 			{
 				if(Input.GetAxis("Distance")>0 && throwPower < maxThrowPower)
 				{
-					throwPower += 0.5f;
+					throwPower += 1f;
 				}
 
 				if(Input.GetAxis("Distance")<0 && throwPower > minThrowPower)
 				{
-					throwPower -= 0.5f;
+					throwPower -= 1f;
 				}
 
 				if (tempThrowPower != throwPower || transform.position != tempPosition || transform.rotation != tempRotation)

@@ -26,7 +26,7 @@ public class HeadBehaviour : MonoBehaviour {
 	void Update () {
 
 		attachedToBody = GetComponent<ThrowableObject>().attachedToBody;
-		headRotationY = Input.GetAxis("Mouse Y") * rotationSpeed * Time.deltaTime;
+		headRotationY = -Input.GetAxis("Mouse Y") * rotationSpeed * Time.deltaTime;
 		transform.Rotate(Vector3.right * headRotationY);
 		if (!attachedToBody)
 		{
