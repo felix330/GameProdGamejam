@@ -16,9 +16,14 @@ public class BodyAnimation : MonoBehaviour {
 	void Update () {
 		if (body.GetComponent<CharacterController>().isGrounded)
 		{
-			animator.SetFloat("WalkSpeed",body.transform.InverseTransformDirection(body.GetComponent<CharacterController>().velocity).z/3);
+			animator.SetBool("Jump",false);
+			animator.SetFloat("WalkSpeed",body.transform.InverseTransformDirection(body.GetComponent<CharacterController>().velocity).z/2.6f);
 		} else {
 			animator.SetFloat("WalkSpeed",0);
 		}
+	}
+
+	void ReceiveJump() {
+		animator.SetBool("Jump",true);
 	}
 }

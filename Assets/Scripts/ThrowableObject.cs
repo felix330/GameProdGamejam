@@ -117,6 +117,7 @@ public class ThrowableObject : MonoBehaviour {
 
 		newTestBall.GetComponent<Rigidbody>().AddForce(new Vector3(transform.TransformDirection(Vector3.forward).x*throwPower,1.7f*throwPower,transform.TransformDirection(Vector3.forward).z*throwPower));
 		predictionLine.GetComponent<PredictionLine>().ball = newTestBall;
+
 		predictionLine.GetComponent<PredictionLine>().active = true;
 
 	}

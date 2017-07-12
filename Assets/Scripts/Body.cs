@@ -31,8 +31,10 @@ public class Body : MonoBehaviour {
 				moveDirection = new Vector3(0, 0, Input.GetAxis("Vertical"));
 				moveDirection = transform.TransformDirection(moveDirection);
 				moveDirection *= speed;
-				if (Input.GetButton("Jump"))
+				if (Input.GetButton("Jump")) {
+					BroadcastMessage("ReceiveJump");
 					moveDirection.y = jumpSpeed;
+				}
 				transform.eulerAngles = new Vector3(transform.eulerAngles.x,transform.eulerAngles.y+Input.GetAxis("Horizontal")*rotationSpeed,transform.eulerAngles.z);
 			}
 			
@@ -41,9 +43,10 @@ public class Body : MonoBehaviour {
 				moveDirection = new Vector3(0, 0, Input.GetAxis("Vertical"));
 				moveDirection = transform.TransformDirection(moveDirection);
 				moveDirection *= speed;
-				if (Input.GetButton("Jump"))
+				if (Input.GetButton("Jump")) {
+					BroadcastMessage("ReceiveJump");
 					moveDirection.y = jumpSpeed;
-				
+				}
 				if(Input.GetAxis("Horizontal") != 0){
 					transform.eulerAngles = new Vector3(transform.eulerAngles.x,transform.eulerAngles.y+Input.GetAxis("Horizontal")*rotationSpeed,transform.eulerAngles.z);
 				} else {

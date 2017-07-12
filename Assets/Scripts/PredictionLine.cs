@@ -20,10 +20,13 @@ public class PredictionLine : MonoBehaviour {
 	void Update () {
 		if (active)
 		{
+			Debug.Log("Prediction Line active");
+			Debug.Log(ball);
 			counter++;
 
 			if (ball != null && !Physics.Raycast(ball.transform.position,Vector3.down,0.6f) && counter > 10)
 			{
+				Debug.Log("Add position");
 				positions.Add(ball.transform.position);
 				drawLines();
 				counter = 0;
@@ -33,6 +36,7 @@ public class PredictionLine : MonoBehaviour {
 
 	void drawLines()
 	{
+		Debug.Log("Draw Lines");
 		GetComponent<LineRenderer>().positionCount = positions.Count;
 
 		GetComponent<LineRenderer>().SetPosition(GetComponent<LineRenderer>().positionCount-1,(Vector3)positions[positions.Count-1]);
@@ -41,5 +45,11 @@ public class PredictionLine : MonoBehaviour {
 		{
 			GetComponent<LineRenderer>().SetPosition(i,(Vector3)positions[i]);
 		}*/
+	}
+
+	void SetBall(GameObject g)
+	{
+		Debug.Log("Setting Ball");
+		ball = g;
 	}
 }
