@@ -54,4 +54,9 @@ public class BodyAnimation : MonoBehaviour {
 		Debug.Log("Hold up done");
 		SendMessageUpwards("HoldUpAttach");
 	}
+
+	void Footstep()
+	{
+		GetComponent<AudioSource>().Play();
+	}
 }

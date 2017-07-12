@@ -14,7 +14,6 @@ public class EnemyAnimation : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		Debug.Log(animator.GetFloat("WalkSpeed"));
 		if (body.GetComponent<CharacterController>().isGrounded)
 		{
 			animator.SetBool("Jump",false);
