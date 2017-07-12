@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GateBehaviour : MonoBehaviour {
-	public string myKey;
+	public GameObject myKey;
 	
 	// Use this for initialization
 	void Start () {
@@ -15,7 +15,7 @@ public class GateBehaviour : MonoBehaviour {
 		
 	}
 	
-	void OpenGate(string _key){
+	void OpenGate(GameObject _key){
 		if(_key == myKey){
 			gameObject.SetActive(false);
 		}
