@@ -16,10 +16,16 @@ public class ThirdPersonCamera : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(myTargetHead.GetComponent<HeadBehaviour>().attachedToBody){
-			myTargetBody = myTargetHead.transform.parent.parent;
-			bodyPosition = myTargetBody.position;
-			transform.LookAt(myTargetBody);
-			transform.position = new Vector3(bodyPosition.x+7, bodyPosition.y+2, bodyPosition.z-5.35f);
+			if (myTargetHead.transform.parent.parent != null){
+				myTargetBody = myTargetHead.transform.parent.parent;
+			}
+
+			if (myTargetBody != null)
+			{
+				bodyPosition = myTargetBody.position;
+				transform.LookAt(myTargetBody);
+				transform.position = new Vector3(bodyPosition.x+7, bodyPosition.y+2, bodyPosition.z-5.35f);
+			}
 		} else {
 			headPosition = myTargetHead.position;
 			transform.LookAt(myTargetHead);
