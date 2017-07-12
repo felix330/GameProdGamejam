@@ -21,12 +21,15 @@ public class Body : MonoBehaviour {
 	public float rotationSpeed;
 	private Vector3 moveDirection = Vector3.zero;
 	public GameObject hand;
-	
+
+	private GameObject connectedObject;
+	private bool pickingUp;
+
 	void Update() {
 		
 		CharacterController controller = GetComponent<CharacterController>();
 		
-		if(controller.isGrounded){
+		if(controller.isGrounded && !pickingUp){
 			if (headless && isUsed) {
 				//Debug.Log("Ich werde beobachtet.");
 				moveDirection = new Vector3(0, 0, Input.GetAxis("Vertical"));
@@ -62,6 +65,12 @@ public class Body : MonoBehaviour {
 			}
 			
 		}
+
+		if (pickingUp)
+		{
+			moveDirection.x = 0;
+			moveDirection.z = 0;
+		}
 		
 		moveDirection.y -= gravity * Time.deltaTime;
 		controller.Move(moveDirection * Time.deltaTime);
@@ -69,9 +78,12 @@ public class Body : MonoBehaviour {
 
 	//Collect objects
 	void OnControllerColliderHit(ControllerColliderHit collisionInfo){
-		if(collisionInfo.gameObject.tag == "ThrowableObject" && !gotAnObject){
-			gotAnObject = true;
-			SendMessage(ReceivePickUp);
+		if(collisionInfo.gameObject.tag == "ThrowableObject" && !gotAnObject && !pickingUp){
+			//gotAnObject = true;
+			Debug.Log("ReceivePickup");
+			BroadcastMessage("ReceivePickUp");
+			connectedObject = collisionInfo.gameObject;
+			pickingUp = true;
 			/*collisionInfo.gameObject.transform.parent = headPosition.transform;
 			collisionInfo.gameObject.transform.localPosition = Vector3.zero;
 			collisionInfo.gameObject.transform.rotation = headPosition.transform.rotation;
@@ -83,5 +95,27 @@ public class Body : MonoBehaviour {
 			}*/
 			
 		}
+	}
+
+	void PickUpAttach() {
+		connectedObject.transform.parent = headPosition.transform;
+		connectedObject.transform.localPosition = Vector3.zero;
+		connectedObject.transform.rotation = headPosition.transform.rotation;
+		connectedObject.GetComponent<ThrowableObject>().attachedToBody = true;
+		if(connectedObject.gameObject.name == "Head"){
+			connectedObject.gameObject.GetComponent<HeadBehaviour>().attachedToBody = true;
+			isUsed = false;
+			headless = false;
+		}
+		headPosition.transform.parent = hand.transform;
+		headPosition.transform.localPosition = Vector3.zero;
+	}
+
+	void HoldUpAttach() {
+		gotAnObject = true;
+		headPosition.transform.parent = transform;
+		headPosition.transform.localEulerAngles = Vector3.zero;
+		headPosition.transform.localPosition = new Vector3(0.09f,1.4f,-0.14f);
+		pickingUp = false;
 	}
 }

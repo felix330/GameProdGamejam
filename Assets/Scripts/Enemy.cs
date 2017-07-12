@@ -30,9 +30,16 @@ public class Enemy : MonoBehaviour {
 	void Update () {
 		//Only follow stray heads
 		Vector3 moveDirection = new Vector3();
-		if (inPursuit && ThrowObj != null && !ThrowObj.GetComponent<HeadBehaviour>().attachedToBody && ThrowObj.GetComponent<HeadBehaviour>().groundTouching)
+		if (inPursuit && ThrowObj != null)
 		{
-			moveDirection = Vector3.MoveTowards(transform.position,ThrowObj.transform.position,2f)-transform.position;
+			if (!ThrowObj.GetComponent<HeadBehaviour>().attachedToBody && ThrowObj.GetComponent<HeadBehaviour>().groundTouching)
+			{
+				moveDirection = Vector3.MoveTowards(transform.position,ThrowObj.transform.position,2f)-transform.position;
+				transform.LookAt(ThrowObj.transform.position);
+				transform.localEulerAngles = new Vector3(0,transform.localEulerAngles.y,0);
+			} else {
+				moveDirection = Vector3.MoveTowards(transform.position,basePosition,2f)-transform.position;
+			}
 		} else {
 			moveDirection = Vector3.MoveTowards(transform.position,basePosition,2f)-transform.position;
 		}

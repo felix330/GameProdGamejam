@@ -34,10 +34,13 @@ public class ThrowableObject : MonoBehaviour {
 		if (!attachedToBody){
 			GetComponent<MeshCollider>().enabled = true;
 			GetComponent<Rigidbody>().isKinematic = false;
-			
-			predictionLine.GetComponent<LineRenderer>().positionCount = 0;
-			predictionLine.GetComponent<PredictionLine>().positions = new ArrayList();
-			predictionLine.GetComponent<PredictionLine>().ball = null;
+
+			if (!predictionLine.GetComponent<PredictionLine>().active)
+			{
+				predictionLine.GetComponent<LineRenderer>().positionCount = 0;
+				predictionLine.GetComponent<PredictionLine>().positions = new ArrayList();
+				predictionLine.GetComponent<PredictionLine>().ball = null;
+			}
 			ThrowMode = false;
 		} else {
 			GetComponent<Rigidbody>().isKinematic = true;
@@ -67,6 +70,7 @@ public class ThrowableObject : MonoBehaviour {
 						transform.parent.parent.gameObject.GetComponent<Body>().headless = true;
 					}
 					transform.parent.parent.gameObject.GetComponent<Body>().gotAnObject = false;
+					transform.parent.parent.BroadcastMessage("ReceiveThrow");
 					transform.parent = null;
 					GetComponent<Rigidbody>().isKinematic = false;
 					attachedToBody = false;
@@ -81,7 +85,7 @@ public class ThrowableObject : MonoBehaviour {
 			
 			if (Input.GetButtonDown("Throw"))
 			{
-				if (ThrowMode == false)
+				if (ThrowMode == false && attachedToBody)
 				{
 					ThrowMode = true;
 					ThrowPredict();
@@ -110,6 +114,7 @@ public class ThrowableObject : MonoBehaviour {
 			
 	void ThrowPredict()
 	{
+		Debug.Log("Throwpredict"+gameObject.name);
 		newTestBall = Instantiate(testBall);
 		newTestBall.transform.position = transform.position;
 		newTestBall.transform.rotation = transform.rotation;
@@ -137,7 +142,12 @@ public class ThrowableObject : MonoBehaviour {
 
 	void GetThrown(Vector3 v)
 	{
-		BroadcastMessage("ReceiveThrow");
+		ThrowMode = false;
+		newTestBall = null;
+		predictionLine.GetComponent<LineRenderer>().positionCount = 0;
+		predictionLine.GetComponent<PredictionLine>().positions = new ArrayList();
+		predictionLine.GetComponent<PredictionLine>().ball = null;
+		predictionLine.GetComponent<PredictionLine>().active = false;
 		Debug.Log("ThrowStrength" + v);
 		GetComponent<Rigidbody>().AddForce(v);
 	}
