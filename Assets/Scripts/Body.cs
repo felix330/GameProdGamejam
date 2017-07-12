@@ -20,6 +20,7 @@ public class Body : MonoBehaviour {
 	public float gravity;
 	public float rotationSpeed;
 	private Vector3 moveDirection = Vector3.zero;
+	public GameObject hand;
 	
 	void Update() {
 		
@@ -70,7 +71,8 @@ public class Body : MonoBehaviour {
 	void OnControllerColliderHit(ControllerColliderHit collisionInfo){
 		if(collisionInfo.gameObject.tag == "ThrowableObject" && !gotAnObject){
 			gotAnObject = true;
-			collisionInfo.gameObject.transform.parent = headPosition.transform;
+			SendMessage(ReceivePickUp);
+			/*collisionInfo.gameObject.transform.parent = headPosition.transform;
 			collisionInfo.gameObject.transform.localPosition = Vector3.zero;
 			collisionInfo.gameObject.transform.rotation = headPosition.transform.rotation;
 			collisionInfo.gameObject.GetComponent<ThrowableObject>().attachedToBody = true;			
@@ -78,7 +80,7 @@ public class Body : MonoBehaviour {
 				collisionInfo.gameObject.GetComponent<HeadBehaviour>().attachedToBody = true;
 				isUsed = false;
 				headless = false;
-			}
+			}*/
 			
 		}
 	}

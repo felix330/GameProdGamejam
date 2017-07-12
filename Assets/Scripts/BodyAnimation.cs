@@ -21,9 +21,24 @@ public class BodyAnimation : MonoBehaviour {
 		} else {
 			animator.SetFloat("WalkSpeed",0);
 		}
+
+		if (!body.GetComponent<Body>().gotAnObject)
+		{
+			animator.SetBool("Holding",false);
+		} else {
+			animator.SetBool("Holding",true);
+		}
 	}
 
 	void ReceiveJump() {
 		animator.SetBool("Jump",true);
+	}
+
+	void ReceiveThrow() {
+		animator.SetTrigger("Throw");
+	}
+
+	void ReceivePickUp() {
+		animator.SetTrigger("PickUpStart");
 	}
 }

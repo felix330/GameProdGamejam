@@ -137,6 +137,7 @@ public class ThrowableObject : MonoBehaviour {
 
 	void GetThrown(Vector3 v)
 	{
+		BroadcastMessage("ReceiveThrow");
 		Debug.Log("ThrowStrength" + v);
 		GetComponent<Rigidbody>().AddForce(v);
 	}
