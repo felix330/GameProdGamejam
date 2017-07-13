@@ -42,6 +42,8 @@ public class Enemy : MonoBehaviour {
 			}
 		} else {
 			moveDirection = Vector3.MoveTowards(transform.position,basePosition,2f)-transform.position;
+			transform.LookAt(basePosition);
+			transform.localEulerAngles = new Vector3(0,transform.localEulerAngles.y,0);
 		}
 
 		moveDirection.y -= gravity * Time.deltaTime;
@@ -60,26 +62,22 @@ public class Enemy : MonoBehaviour {
 		inPursuit = false;
 	}
 
-	void OnTriggerEnter(Collider c) {
-		if (c.gameObject.tag == "ThrowableObject" && !ThrowObj.GetComponent<HeadBehaviour>().attachedToBody)
-		{
-			PickUpHead();
-		}
-	}
+
 
 	//Take the head and throw it into direction
 	void PickUpHead()
 	{
 		Debug.Log("Picking up Head");
-		ThrowObj.GetComponent<Rigidbody>().isKinematic = true;
+		/*ThrowObj.GetComponent<Rigidbody>().isKinematic = true;
 		ThrowObj.transform.parent = headPosition.transform;
 		ThrowObj.gameObject.transform.localPosition = Vector3.zero;
 		ThrowObj.gameObject.transform.rotation = headPosition.transform.rotation;
 		ThrowObj.transform.parent = null;
-		ThrowObj.GetComponent<Rigidbody>().isKinematic = false;
+		ThrowObj.GetComponent<Rigidbody>().isKinematic = false;*/
 		inPursuit = false;
+		ThrowObj.GetComponent<Rigidbody>().AddForce(new Vector3(transform.TransformDirection(Vector3.forward).x,1.7f*3,transform.TransformDirection(Vector3.forward).z)*100);
 
-		ThrowObj.SendMessage("GetThrown",new Vector3(throwPower,1.7f*throwPower,transform.TransformDirection(throwDirection).z*throwPower));
+		//ThrowObj.SendMessage("GetThrown",new Vector3(throwPower,1.7f*throwPower,transform.TransformDirection(throwDirection).z*throwPower));
 		//Debug.Log(transform.TransformDirection(throwDirection).x);
 		//ThrowObj.GetComponent<Rigidbody>().AddForce(new Vector3(8*throwPower,1.7f*throwPower,transform.TransformDirection(throwDirection).z*throwPower));
 	}
