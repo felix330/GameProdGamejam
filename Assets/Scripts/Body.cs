@@ -45,19 +45,23 @@ public class Body : MonoBehaviour {
 			if (!headless && !isUsed) {
 				//Debug.Log("Habe meinen Kopf gefunden.");
 				moveDirection = new Vector3(0, 0, Input.GetAxis("Vertical"));
-				moveDirection = transform.TransformDirection(moveDirection);
-				moveDirection *= speed;
+
 				if (Input.GetButton("Jump")) {
 					BroadcastMessage("ReceiveJump");
 					moveDirection.y = jumpSpeed;
 				}
-				if(Input.GetAxis("Horizontal") != 0){
-					transform.eulerAngles = new Vector3(transform.eulerAngles.x,transform.eulerAngles.y+Input.GetAxis("Horizontal")*rotationSpeed,transform.eulerAngles.z);
-				} else {
+
+				if(Input.GetAxis("Horizontal") > 0){
+					moveDirection = new Vector3(1,0,moveDirection.z);
+				} else if (Input.GetAxis("Horizontal") < 0){
+					moveDirection = new Vector3(-1,0,moveDirection.z);
+				} 
+
+				moveDirection = transform.TransformDirection(moveDirection);
+				moveDirection *= speed;
 					
-					
-					transform.eulerAngles = new Vector3(transform.eulerAngles.x/*+Input.GetAxis("Mouse Y")*rotationSpeed*2*/,transform.eulerAngles.y+Input.GetAxis("Mouse X")*rotationSpeed*2,transform.eulerAngles.z);
-				}
+				transform.eulerAngles = new Vector3(transform.eulerAngles.x/*+Input.GetAxis("Mouse Y")*rotationSpeed*2*/,transform.eulerAngles.y+Input.GetAxis("Mouse X")*rotationSpeed*2,transform.eulerAngles.z);
+				
 			}
 			
 			if (headless && !isUsed) {

@@ -28,7 +28,7 @@ public class PredictionLine : MonoBehaviour {
 			{
 				counter++;
 
-				if (counter > 10)
+				if (counter > 4)
 				{
 					Debug.Log("Add position");
 					positions.Add(ball.transform.position);

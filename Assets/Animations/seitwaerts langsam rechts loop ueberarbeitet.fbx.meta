@@ -1,0 +1,1179 @@
+fileFormatVersion: 2
+guid: b8a42c60e4e889349816fb1b800d9a85
+timeCreated: 1499949115
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: arm_links
+    100002: arm_rechts
+    100004: bein_links
+    100006: bein_rechts
+    100008: Character_Ctrl:ChestEndEffector
+    100010: Character_Ctrl:ChestOriginEffector
+    100012: Character_Ctrl:Head
+    100014: Character_Ctrl:HeadEffector
+    100016: Character_Ctrl:Hips
+    100018: Character_Ctrl:HipsEffector
+    100020: Character_Ctrl:LeftAnkleEffector
+    100022: Character_Ctrl:LeftArm
+    100024: Character_Ctrl:LeftElbowEffector
+    100026: Character_Ctrl:LeftFoot
+    100028: Character_Ctrl:LeftFootEffector
+    100030: Character_Ctrl:LeftForeArm
+    100032: Character_Ctrl:LeftHand
+    100034: Character_Ctrl:LeftHandIndex1
+    100036: Character_Ctrl:LeftHandIndex2
+    100038: Character_Ctrl:LeftHandIndex3
+    100040: Character_Ctrl:LeftHandIndexEffector
+    100042: Character_Ctrl:LeftHandMiddle1
+    100044: Character_Ctrl:LeftHandMiddle2
+    100046: Character_Ctrl:LeftHandMiddle3
+    100048: Character_Ctrl:LeftHandMiddleEffector
+    100050: Character_Ctrl:LeftHandPinky1
+    100052: Character_Ctrl:LeftHandPinky2
+    100054: Character_Ctrl:LeftHandPinky3
+    100056: Character_Ctrl:LeftHandPinkyEffector
+    100058: Character_Ctrl:LeftHandRing1
+    100060: Character_Ctrl:LeftHandRing2
+    100062: Character_Ctrl:LeftHandRing3
+    100064: Character_Ctrl:LeftHandRingEffector
+    100066: Character_Ctrl:LeftHandThumb1
+    100068: Character_Ctrl:LeftHandThumb2
+    100070: Character_Ctrl:LeftHandThumb3
+    100072: Character_Ctrl:LeftHandThumbEffector
+    100074: Character_Ctrl:LeftHipEffector
+    100076: Character_Ctrl:LeftKneeEffector
+    100078: Character_Ctrl:LeftLeg
+    100080: Character_Ctrl:LeftShoulder
+    100082: Character_Ctrl:LeftShoulderEffector
+    100084: Character_Ctrl:LeftToeBase
+    100086: Character_Ctrl:LeftUpLeg
+    100088: Character_Ctrl:LeftWristEffector
+    100090: Character_Ctrl:Neck
+    100092: Character_Ctrl:Reference
+    100094: Character_Ctrl:RightAnkleEffector
+    100096: Character_Ctrl:RightArm
+    100098: Character_Ctrl:RightElbowEffector
+    100100: Character_Ctrl:RightFoot
+    100102: Character_Ctrl:RightFootEffector
+    100104: Character_Ctrl:RightForeArm
+    100106: Character_Ctrl:RightHand
+    100108: Character_Ctrl:RightHandIndex1
+    100110: Character_Ctrl:RightHandIndex2
+    100112: Character_Ctrl:RightHandIndex3
+    100114: Character_Ctrl:RightHandIndexEffector
+    100116: Character_Ctrl:RightHandMiddle1
+    100118: Character_Ctrl:RightHandMiddle2
+    100120: Character_Ctrl:RightHandMiddle3
+    100122: Character_Ctrl:RightHandMiddleEffector
+    100124: Character_Ctrl:RightHandPinky1
+    100126: Character_Ctrl:RightHandPinky2
+    100128: Character_Ctrl:RightHandPinky3
+    100130: Character_Ctrl:RightHandPinkyEffector
+    100132: Character_Ctrl:RightHandRing1
+    100134: Character_Ctrl:RightHandRing2
+    100136: Character_Ctrl:RightHandRing3
+    100138: Character_Ctrl:RightHandRingEffector
+    100140: Character_Ctrl:RightHandThumb1
+    100142: Character_Ctrl:RightHandThumb2
+    100144: Character_Ctrl:RightHandThumb3
+    100146: Character_Ctrl:RightHandThumbEffector
+    100148: Character_Ctrl:RightHipEffector
+    100150: Character_Ctrl:RightKneeEffector
+    100152: Character_Ctrl:RightLeg
+    100154: Character_Ctrl:RightShoulder
+    100156: Character_Ctrl:RightShoulderEffector
+    100158: Character_Ctrl:RightToeBase
+    100160: Character_Ctrl:RightUpLeg
+    100162: Character_Ctrl:RightWristEffector
+    100164: Character_Ctrl:Spine
+    100166: Character_Ctrl:Spine1
+    100168: charakter
+    100170: Charakter_einzeln
+    100172: Charakter_NEU3
+    100174: CINEMA_4D_Editor
+    100176: gruen_Ctrl:ChestEndEffector
+    100178: gruen_Ctrl:ChestOriginEffector
+    100180: gruen_Ctrl:Head
+    100182: gruen_Ctrl:HeadEffector
+    100184: gruen_Ctrl:Hips
+    100186: gruen_Ctrl:HipsEffector
+    100188: gruen_Ctrl:LeftAnkleEffector
+    100190: gruen_Ctrl:LeftArm
+    100192: gruen_Ctrl:LeftElbowEffector
+    100194: gruen_Ctrl:LeftFoot
+    100196: gruen_Ctrl:LeftFootEffector
+    100198: gruen_Ctrl:LeftForeArm
+    100200: gruen_Ctrl:LeftHand
+    100202: gruen_Ctrl:LeftHandIndex1
+    100204: gruen_Ctrl:LeftHandIndex2
+    100206: gruen_Ctrl:LeftHandIndex3
+    100208: gruen_Ctrl:LeftHandIndexEffector
+    100210: gruen_Ctrl:LeftHandMiddle1
+    100212: gruen_Ctrl:LeftHandMiddle2
+    100214: gruen_Ctrl:LeftHandMiddle3
+    100216: gruen_Ctrl:LeftHandMiddleEffector
+    100218: gruen_Ctrl:LeftHandPinky1
+    100220: gruen_Ctrl:LeftHandPinky2
+    100222: gruen_Ctrl:LeftHandPinky3
+    100224: gruen_Ctrl:LeftHandPinkyEffector
+    100226: gruen_Ctrl:LeftHandRing1
+    100228: gruen_Ctrl:LeftHandRing2
+    100230: gruen_Ctrl:LeftHandRing3
+    100232: gruen_Ctrl:LeftHandRingEffector
+    100234: gruen_Ctrl:LeftHandThumb1
+    100236: gruen_Ctrl:LeftHandThumb2
+    100238: gruen_Ctrl:LeftHandThumb3
+    100240: gruen_Ctrl:LeftHandThumbEffector
+    100242: gruen_Ctrl:LeftHipEffector
+    100244: gruen_Ctrl:LeftKneeEffector
+    100246: gruen_Ctrl:LeftLeg
+    100248: gruen_Ctrl:LeftShoulder
+    100250: gruen_Ctrl:LeftShoulderEffector
+    100252: gruen_Ctrl:LeftToeBase
+    100254: gruen_Ctrl:LeftUpLeg
+    100256: gruen_Ctrl:LeftWristEffector
+    100258: gruen_Ctrl:Neck
+    100260: gruen_Ctrl:Reference
+    100262: gruen_Ctrl:RightAnkleEffector
+    100264: gruen_Ctrl:RightArm
+    100266: gruen_Ctrl:RightElbowEffector
+    100268: gruen_Ctrl:RightFoot
+    100270: gruen_Ctrl:RightFootEffector
+    100272: gruen_Ctrl:RightForeArm
+    100274: gruen_Ctrl:RightHand
+    100276: gruen_Ctrl:RightHandIndex1
+    100278: gruen_Ctrl:RightHandIndex2
+    100280: gruen_Ctrl:RightHandIndex3
+    100282: gruen_Ctrl:RightHandIndexEffector
+    100284: gruen_Ctrl:RightHandMiddle1
+    100286: gruen_Ctrl:RightHandMiddle2
+    100288: gruen_Ctrl:RightHandMiddle3
+    100290: gruen_Ctrl:RightHandMiddleEffector
+    100292: gruen_Ctrl:RightHandPinky1
+    100294: gruen_Ctrl:RightHandPinky2
+    100296: gruen_Ctrl:RightHandPinky3
+    100298: gruen_Ctrl:RightHandPinkyEffector
+    100300: gruen_Ctrl:RightHandRing1
+    100302: gruen_Ctrl:RightHandRing2
+    100304: gruen_Ctrl:RightHandRing3
+    100306: gruen_Ctrl:RightHandRingEffector
+    100308: gruen_Ctrl:RightHandThumb1
+    100310: gruen_Ctrl:RightHandThumb2
+    100312: gruen_Ctrl:RightHandThumb3
+    100314: gruen_Ctrl:RightHandThumbEffector
+    100316: gruen_Ctrl:RightHipEffector
+    100318: gruen_Ctrl:RightKneeEffector
+    100320: gruen_Ctrl:RightLeg
+    100322: gruen_Ctrl:RightShoulder
+    100324: gruen_Ctrl:RightShoulderEffector
+    100326: gruen_Ctrl:RightToeBase
+    100328: gruen_Ctrl:RightUpLeg
+    100330: gruen_Ctrl:RightWristEffector
+    100332: gruen_Ctrl:Spine
+    100334: gruen_Ctrl:Spine1
+    100336: hals
+    100338: handl_links
+    100340: handl_links_1
+    100342: handl_links_10
+    100344: handl_links_11
+    100346: handl_links_2
+    100348: handl_links_3
+    100350: handl_links_4
+    100352: handl_links_5
+    100354: handl_links_6
+    100356: handl_links_7
+    100358: handl_links_8
+    100360: handl_links_9
+    100362: Head
+    100364: headPlace
+    100366: Hips
+    100368: Kapsel
+    100370: Kapsel_1
+    100372: Kugel
+    100374: Kugel_1
+    100376: LeftArm
+    100378: LeftFoot
+    100380: LeftForeArm
+    100382: LeftHand
+    100384: LeftHandIndex1
+    100386: LeftHandIndex2
+    100388: LeftHandIndex3
+    100390: LeftHandMiddle1
+    100392: LeftHandMiddle2
+    100394: LeftHandMiddle3
+    100396: LeftHandPinky1
+    100398: LeftHandPinky2
+    100400: LeftHandPinky3
+    100402: LeftHandRing1
+    100404: LeftHandRing2
+    100406: LeftHandRing3
+    100408: LeftHandThumb1
+    100410: LeftHandThumb2
+    100412: LeftHandThumb3
+    100414: LeftLeg
+    100416: LeftShoulder
+    100418: LeftToeBase
+    100420: LeftUpLeg
+    100422: Neck
+    100424: "oberk\xF6rper"
+    100426: RightArm
+    100428: RightFoot
+    100430: RightForeArm
+    100432: RightHand
+    100434: RightHandIndex1
+    100436: RightHandIndex2
+    100438: RightHandIndex3
+    100440: RightHandMiddle1
+    100442: RightHandMiddle2
+    100444: RightHandMiddle3
+    100446: RightHandPinky1
+    100448: RightHandPinky2
+    100450: RightHandPinky3
+    100452: RightHandRing1
+    100454: RightHandRing2
+    100456: RightHandRing3
+    100458: RightHandThumb1
+    100460: RightHandThumb2
+    100462: RightHandThumb3
+    100464: RightLeg
+    100466: RightShoulder
+    100468: RightToeBase
+    100470: RightUpLeg
+    100472: Root
+    100474: Schukterrn
+    100476: "Schulter_Gro\xDF"
+    100478: Schulter_unten
+    100480: //RootNode
+    100482: Spine
+    100484: Spine1
+    100486: Symmetrie
+    100488: Symmetrie_2
+    100490: Symmetrie_3
+    100492: "unterk\xF6rper"
+    400000: arm_links
+    400002: arm_rechts
+    400004: bein_links
+    400006: bein_rechts
+    400008: Character_Ctrl:ChestEndEffector
+    400010: Character_Ctrl:ChestOriginEffector
+    400012: Character_Ctrl:Head
+    400014: Character_Ctrl:HeadEffector
+    400016: Character_Ctrl:Hips
+    400018: Character_Ctrl:HipsEffector
+    400020: Character_Ctrl:LeftAnkleEffector
+    400022: Character_Ctrl:LeftArm
+    400024: Character_Ctrl:LeftElbowEffector
+    400026: Character_Ctrl:LeftFoot
+    400028: Character_Ctrl:LeftFootEffector
+    400030: Character_Ctrl:LeftForeArm
+    400032: Character_Ctrl:LeftHand
+    400034: Character_Ctrl:LeftHandIndex1
+    400036: Character_Ctrl:LeftHandIndex2
+    400038: Character_Ctrl:LeftHandIndex3
+    400040: Character_Ctrl:LeftHandIndexEffector
+    400042: Character_Ctrl:LeftHandMiddle1
+    400044: Character_Ctrl:LeftHandMiddle2
+    400046: Character_Ctrl:LeftHandMiddle3
+    400048: Character_Ctrl:LeftHandMiddleEffector
+    400050: Character_Ctrl:LeftHandPinky1
+    400052: Character_Ctrl:LeftHandPinky2
+    400054: Character_Ctrl:LeftHandPinky3
+    400056: Character_Ctrl:LeftHandPinkyEffector
+    400058: Character_Ctrl:LeftHandRing1
+    400060: Character_Ctrl:LeftHandRing2
+    400062: Character_Ctrl:LeftHandRing3
+    400064: Character_Ctrl:LeftHandRingEffector
+    400066: Character_Ctrl:LeftHandThumb1
+    400068: Character_Ctrl:LeftHandThumb2
+    400070: Character_Ctrl:LeftHandThumb3
+    400072: Character_Ctrl:LeftHandThumbEffector
+    400074: Character_Ctrl:LeftHipEffector
+    400076: Character_Ctrl:LeftKneeEffector
+    400078: Character_Ctrl:LeftLeg
+    400080: Character_Ctrl:LeftShoulder
+    400082: Character_Ctrl:LeftShoulderEffector
+    400084: Character_Ctrl:LeftToeBase
+    400086: Character_Ctrl:LeftUpLeg
+    400088: Character_Ctrl:LeftWristEffector
+    400090: Character_Ctrl:Neck
+    400092: Character_Ctrl:Reference
+    400094: Character_Ctrl:RightAnkleEffector
+    400096: Character_Ctrl:RightArm
+    400098: Character_Ctrl:RightElbowEffector
+    400100: Character_Ctrl:RightFoot
+    400102: Character_Ctrl:RightFootEffector
+    400104: Character_Ctrl:RightForeArm
+    400106: Character_Ctrl:RightHand
+    400108: Character_Ctrl:RightHandIndex1
+    400110: Character_Ctrl:RightHandIndex2
+    400112: Character_Ctrl:RightHandIndex3
+    400114: Character_Ctrl:RightHandIndexEffector
+    400116: Character_Ctrl:RightHandMiddle1
+    400118: Character_Ctrl:RightHandMiddle2
+    400120: Character_Ctrl:RightHandMiddle3
+    400122: Character_Ctrl:RightHandMiddleEffector
+    400124: Character_Ctrl:RightHandPinky1
+    400126: Character_Ctrl:RightHandPinky2
+    400128: Character_Ctrl:RightHandPinky3
+    400130: Character_Ctrl:RightHandPinkyEffector
+    400132: Character_Ctrl:RightHandRing1
+    400134: Character_Ctrl:RightHandRing2
+    400136: Character_Ctrl:RightHandRing3
+    400138: Character_Ctrl:RightHandRingEffector
+    400140: Character_Ctrl:RightHandThumb1
+    400142: Character_Ctrl:RightHandThumb2
+    400144: Character_Ctrl:RightHandThumb3
+    400146: Character_Ctrl:RightHandThumbEffector
+    400148: Character_Ctrl:RightHipEffector
+    400150: Character_Ctrl:RightKneeEffector
+    400152: Character_Ctrl:RightLeg
+    400154: Character_Ctrl:RightShoulder
+    400156: Character_Ctrl:RightShoulderEffector
+    400158: Character_Ctrl:RightToeBase
+    400160: Character_Ctrl:RightUpLeg
+    400162: Character_Ctrl:RightWristEffector
+    400164: Character_Ctrl:Spine
+    400166: Character_Ctrl:Spine1
+    400168: charakter
+    400170: Charakter_einzeln
+    400172: Charakter_NEU3
+    400174: CINEMA_4D_Editor
+    400176: gruen_Ctrl:ChestEndEffector
+    400178: gruen_Ctrl:ChestOriginEffector
+    400180: gruen_Ctrl:Head
+    400182: gruen_Ctrl:HeadEffector
+    400184: gruen_Ctrl:Hips
+    400186: gruen_Ctrl:HipsEffector
+    400188: gruen_Ctrl:LeftAnkleEffector
+    400190: gruen_Ctrl:LeftArm
+    400192: gruen_Ctrl:LeftElbowEffector
+    400194: gruen_Ctrl:LeftFoot
+    400196: gruen_Ctrl:LeftFootEffector
+    400198: gruen_Ctrl:LeftForeArm
+    400200: gruen_Ctrl:LeftHand
+    400202: gruen_Ctrl:LeftHandIndex1
+    400204: gruen_Ctrl:LeftHandIndex2
+    400206: gruen_Ctrl:LeftHandIndex3
+    400208: gruen_Ctrl:LeftHandIndexEffector
+    400210: gruen_Ctrl:LeftHandMiddle1
+    400212: gruen_Ctrl:LeftHandMiddle2
+    400214: gruen_Ctrl:LeftHandMiddle3
+    400216: gruen_Ctrl:LeftHandMiddleEffector
+    400218: gruen_Ctrl:LeftHandPinky1
+    400220: gruen_Ctrl:LeftHandPinky2
+    400222: gruen_Ctrl:LeftHandPinky3
+    400224: gruen_Ctrl:LeftHandPinkyEffector
+    400226: gruen_Ctrl:LeftHandRing1
+    400228: gruen_Ctrl:LeftHandRing2
+    400230: gruen_Ctrl:LeftHandRing3
+    400232: gruen_Ctrl:LeftHandRingEffector
+    400234: gruen_Ctrl:LeftHandThumb1
+    400236: gruen_Ctrl:LeftHandThumb2
+    400238: gruen_Ctrl:LeftHandThumb3
+    400240: gruen_Ctrl:LeftHandThumbEffector
+    400242: gruen_Ctrl:LeftHipEffector
+    400244: gruen_Ctrl:LeftKneeEffector
+    400246: gruen_Ctrl:LeftLeg
+    400248: gruen_Ctrl:LeftShoulder
+    400250: gruen_Ctrl:LeftShoulderEffector
+    400252: gruen_Ctrl:LeftToeBase
+    400254: gruen_Ctrl:LeftUpLeg
+    400256: gruen_Ctrl:LeftWristEffector
+    400258: gruen_Ctrl:Neck
+    400260: gruen_Ctrl:Reference
+    400262: gruen_Ctrl:RightAnkleEffector
+    400264: gruen_Ctrl:RightArm
+    400266: gruen_Ctrl:RightElbowEffector
+    400268: gruen_Ctrl:RightFoot
+    400270: gruen_Ctrl:RightFootEffector
+    400272: gruen_Ctrl:RightForeArm
+    400274: gruen_Ctrl:RightHand
+    400276: gruen_Ctrl:RightHandIndex1
+    400278: gruen_Ctrl:RightHandIndex2
+    400280: gruen_Ctrl:RightHandIndex3
+    400282: gruen_Ctrl:RightHandIndexEffector
+    400284: gruen_Ctrl:RightHandMiddle1
+    400286: gruen_Ctrl:RightHandMiddle2
+    400288: gruen_Ctrl:RightHandMiddle3
+    400290: gruen_Ctrl:RightHandMiddleEffector
+    400292: gruen_Ctrl:RightHandPinky1
+    400294: gruen_Ctrl:RightHandPinky2
+    400296: gruen_Ctrl:RightHandPinky3
+    400298: gruen_Ctrl:RightHandPinkyEffector
+    400300: gruen_Ctrl:RightHandRing1
+    400302: gruen_Ctrl:RightHandRing2
+    400304: gruen_Ctrl:RightHandRing3
+    400306: gruen_Ctrl:RightHandRingEffector
+    400308: gruen_Ctrl:RightHandThumb1
+    400310: gruen_Ctrl:RightHandThumb2
+    400312: gruen_Ctrl:RightHandThumb3
+    400314: gruen_Ctrl:RightHandThumbEffector
+    400316: gruen_Ctrl:RightHipEffector
+    400318: gruen_Ctrl:RightKneeEffector
+    400320: gruen_Ctrl:RightLeg
+    400322: gruen_Ctrl:RightShoulder
+    400324: gruen_Ctrl:RightShoulderEffector
+    400326: gruen_Ctrl:RightToeBase
+    400328: gruen_Ctrl:RightUpLeg
+    400330: gruen_Ctrl:RightWristEffector
+    400332: gruen_Ctrl:Spine
+    400334: gruen_Ctrl:Spine1
+    400336: hals
+    400338: handl_links
+    400340: handl_links_1
+    400342: handl_links_10
+    400344: handl_links_11
+    400346: handl_links_2
+    400348: handl_links_3
+    400350: handl_links_4
+    400352: handl_links_5
+    400354: handl_links_6
+    400356: handl_links_7
+    400358: handl_links_8
+    400360: handl_links_9
+    400362: Head
+    400364: headPlace
+    400366: Hips
+    400368: Kapsel
+    400370: Kapsel_1
+    400372: Kugel
+    400374: Kugel_1
+    400376: LeftArm
+    400378: LeftFoot
+    400380: LeftForeArm
+    400382: LeftHand
+    400384: LeftHandIndex1
+    400386: LeftHandIndex2
+    400388: LeftHandIndex3
+    400390: LeftHandMiddle1
+    400392: LeftHandMiddle2
+    400394: LeftHandMiddle3
+    400396: LeftHandPinky1
+    400398: LeftHandPinky2
+    400400: LeftHandPinky3
+    400402: LeftHandRing1
+    400404: LeftHandRing2
+    400406: LeftHandRing3
+    400408: LeftHandThumb1
+    400410: LeftHandThumb2
+    400412: LeftHandThumb3
+    400414: LeftLeg
+    400416: LeftShoulder
+    400418: LeftToeBase
+    400420: LeftUpLeg
+    400422: Neck
+    400424: "oberk\xF6rper"
+    400426: RightArm
+    400428: RightFoot
+    400430: RightForeArm
+    400432: RightHand
+    400434: RightHandIndex1
+    400436: RightHandIndex2
+    400438: RightHandIndex3
+    400440: RightHandMiddle1
+    400442: RightHandMiddle2
+    400444: RightHandMiddle3
+    400446: RightHandPinky1
+    400448: RightHandPinky2
+    400450: RightHandPinky3
+    400452: RightHandRing1
+    400454: RightHandRing2
+    400456: RightHandRing3
+    400458: RightHandThumb1
+    400460: RightHandThumb2
+    400462: RightHandThumb3
+    400464: RightLeg
+    400466: RightShoulder
+    400468: RightToeBase
+    400470: RightUpLeg
+    400472: Root
+    400474: Schukterrn
+    400476: "Schulter_Gro\xDF"
+    400478: Schulter_unten
+    400480: //RootNode
+    400482: Spine
+    400484: Spine1
+    400486: Symmetrie
+    400488: Symmetrie_2
+    400490: Symmetrie_3
+    400492: "unterk\xF6rper"
+    2300000: arm_links
+    2300002: arm_rechts
+    2300004: bein_links
+    2300006: bein_rechts
+    2300008: hals
+    2300010: handl_links
+    2300012: handl_links_1
+    2300014: handl_links_10
+    2300016: handl_links_11
+    2300018: handl_links_2
+    2300020: handl_links_3
+    2300022: handl_links_4
+    2300024: handl_links_5
+    2300026: handl_links_6
+    2300028: handl_links_7
+    2300030: handl_links_8
+    2300032: handl_links_9
+    2300034: headPlace
+    2300036: Kapsel
+    2300038: Kapsel_1
+    2300040: Kugel
+    2300042: Kugel_1
+    2300044: "oberk\xF6rper"
+    2300046: Schukterrn
+    2300048: "Schulter_Gro\xDF"
+    2300050: Schulter_unten
+    2300052: "unterk\xF6rper"
+    3300000: arm_links
+    3300002: arm_rechts
+    3300004: bein_links
+    3300006: bein_rechts
+    3300008: hals
+    3300010: handl_links
+    3300012: handl_links_1
+    3300014: handl_links_10
+    3300016: handl_links_11
+    3300018: handl_links_2
+    3300020: handl_links_3
+    3300022: handl_links_4
+    3300024: handl_links_5
+    3300026: handl_links_6
+    3300028: handl_links_7
+    3300030: handl_links_8
+    3300032: handl_links_9
+    3300034: headPlace
+    3300036: Kapsel
+    3300038: Kapsel_1
+    3300040: Kugel
+    3300042: Kugel_1
+    3300044: "oberk\xF6rper"
+    3300046: Schukterrn
+    3300048: "Schulter_Gro\xDF"
+    3300050: Schulter_unten
+    3300052: "unterk\xF6rper"
+    4300000: Kugel_1
+    4300002: Kugel
+    4300004: Schulter_unten
+    4300006: Schukterrn
+    4300008: "Schulter_Gro\xDF"
+    4300010: handl_links_11
+    4300012: handl_links_10
+    4300014: handl_links_9
+    4300016: handl_links_8
+    4300018: handl_links_7
+    4300020: handl_links_6
+    4300022: handl_links_5
+    4300024: handl_links_4
+    4300026: handl_links_3
+    4300028: handl_links_2
+    4300030: Kapsel_1
+    4300032: handl_links_1
+    4300034: handl_links
+    4300036: Kapsel
+    4300038: bein_rechts
+    4300040: bein_links
+    4300042: "unterk\xF6rper"
+    4300044: arm_rechts
+    4300046: "oberk\xF6rper"
+    4300048: arm_links
+    4300050: hals
+    4300052: Charakter_NEU3
+    4300054: headPlace
+    7400000: Take 002
+    9500000: //RootNode
+    13700000: Charakter_NEU3
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 002
+      takeName: Take 002
+      firstFrame: 122
+      lastFrame: 157
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Character_Ctrl:Reference
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:ChestEndEffector
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:ChestOriginEffector
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:HeadEffector
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:LeftUpLeg
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:LeftUpLeg/Character_Ctrl:LeftLeg
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:LeftUpLeg/Character_Ctrl:LeftLeg/Character_Ctrl:LeftFoot
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:LeftUpLeg/Character_Ctrl:LeftLeg/Character_Ctrl:LeftFoot/Character_Ctrl:LeftToeBase
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:RightUpLeg
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:RightUpLeg/Character_Ctrl:RightLeg
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:RightUpLeg/Character_Ctrl:RightLeg/Character_Ctrl:RightFoot
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:RightUpLeg/Character_Ctrl:RightLeg/Character_Ctrl:RightFoot/Character_Ctrl:RightToeBase
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:LeftShoulder
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:LeftShoulder/Character_Ctrl:LeftArm
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:LeftShoulder/Character_Ctrl:LeftArm/Character_Ctrl:LeftForeArm
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:LeftShoulder/Character_Ctrl:LeftArm/Character_Ctrl:LeftForeArm/Character_Ctrl:LeftHand
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:LeftShoulder/Character_Ctrl:LeftArm/Character_Ctrl:LeftForeArm/Character_Ctrl:LeftHand/Character_Ctrl:LeftHandIndex1
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:LeftShoulder/Character_Ctrl:LeftArm/Character_Ctrl:LeftForeArm/Character_Ctrl:LeftHand/Character_Ctrl:LeftHandIndex1/Character_Ctrl:LeftHandIndex2
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:LeftShoulder/Character_Ctrl:LeftArm/Character_Ctrl:LeftForeArm/Character_Ctrl:LeftHand/Character_Ctrl:LeftHandIndex1/Character_Ctrl:LeftHandIndex2/Character_Ctrl:LeftHandIndex3
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:LeftShoulder/Character_Ctrl:LeftArm/Character_Ctrl:LeftForeArm/Character_Ctrl:LeftHand/Character_Ctrl:LeftHandMiddle1
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:LeftShoulder/Character_Ctrl:LeftArm/Character_Ctrl:LeftForeArm/Character_Ctrl:LeftHand/Character_Ctrl:LeftHandMiddle1/Character_Ctrl:LeftHandMiddle2
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:LeftShoulder/Character_Ctrl:LeftArm/Character_Ctrl:LeftForeArm/Character_Ctrl:LeftHand/Character_Ctrl:LeftHandMiddle1/Character_Ctrl:LeftHandMiddle2/Character_Ctrl:LeftHandMiddle3
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:LeftShoulder/Character_Ctrl:LeftArm/Character_Ctrl:LeftForeArm/Character_Ctrl:LeftHand/Character_Ctrl:LeftHandPinky1
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:LeftShoulder/Character_Ctrl:LeftArm/Character_Ctrl:LeftForeArm/Character_Ctrl:LeftHand/Character_Ctrl:LeftHandPinky1/Character_Ctrl:LeftHandPinky2
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:LeftShoulder/Character_Ctrl:LeftArm/Character_Ctrl:LeftForeArm/Character_Ctrl:LeftHand/Character_Ctrl:LeftHandPinky1/Character_Ctrl:LeftHandPinky2/Character_Ctrl:LeftHandPinky3
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:LeftShoulder/Character_Ctrl:LeftArm/Character_Ctrl:LeftForeArm/Character_Ctrl:LeftHand/Character_Ctrl:LeftHandRing1
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:LeftShoulder/Character_Ctrl:LeftArm/Character_Ctrl:LeftForeArm/Character_Ctrl:LeftHand/Character_Ctrl:LeftHandRing1/Character_Ctrl:LeftHandRing2
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:LeftShoulder/Character_Ctrl:LeftArm/Character_Ctrl:LeftForeArm/Character_Ctrl:LeftHand/Character_Ctrl:LeftHandRing1/Character_Ctrl:LeftHandRing2/Character_Ctrl:LeftHandRing3
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:LeftShoulder/Character_Ctrl:LeftArm/Character_Ctrl:LeftForeArm/Character_Ctrl:LeftHand/Character_Ctrl:LeftHandThumb1
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:LeftShoulder/Character_Ctrl:LeftArm/Character_Ctrl:LeftForeArm/Character_Ctrl:LeftHand/Character_Ctrl:LeftHandThumb1/Character_Ctrl:LeftHandThumb2
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:LeftShoulder/Character_Ctrl:LeftArm/Character_Ctrl:LeftForeArm/Character_Ctrl:LeftHand/Character_Ctrl:LeftHandThumb1/Character_Ctrl:LeftHandThumb2/Character_Ctrl:LeftHandThumb3
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:Neck
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:Neck/Character_Ctrl:Head
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:RightShoulder
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:RightShoulder/Character_Ctrl:RightArm
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:RightShoulder/Character_Ctrl:RightArm/Character_Ctrl:RightForeArm
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:RightShoulder/Character_Ctrl:RightArm/Character_Ctrl:RightForeArm/Character_Ctrl:RightHand
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:RightShoulder/Character_Ctrl:RightArm/Character_Ctrl:RightForeArm/Character_Ctrl:RightHand/Character_Ctrl:RightHandIndex1
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:RightShoulder/Character_Ctrl:RightArm/Character_Ctrl:RightForeArm/Character_Ctrl:RightHand/Character_Ctrl:RightHandIndex1/Character_Ctrl:RightHandIndex2
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:RightShoulder/Character_Ctrl:RightArm/Character_Ctrl:RightForeArm/Character_Ctrl:RightHand/Character_Ctrl:RightHandIndex1/Character_Ctrl:RightHandIndex2/Character_Ctrl:RightHandIndex3
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:RightShoulder/Character_Ctrl:RightArm/Character_Ctrl:RightForeArm/Character_Ctrl:RightHand/Character_Ctrl:RightHandMiddle1
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:RightShoulder/Character_Ctrl:RightArm/Character_Ctrl:RightForeArm/Character_Ctrl:RightHand/Character_Ctrl:RightHandMiddle1/Character_Ctrl:RightHandMiddle2
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:RightShoulder/Character_Ctrl:RightArm/Character_Ctrl:RightForeArm/Character_Ctrl:RightHand/Character_Ctrl:RightHandMiddle1/Character_Ctrl:RightHandMiddle2/Character_Ctrl:RightHandMiddle3
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:RightShoulder/Character_Ctrl:RightArm/Character_Ctrl:RightForeArm/Character_Ctrl:RightHand/Character_Ctrl:RightHandPinky1
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:RightShoulder/Character_Ctrl:RightArm/Character_Ctrl:RightForeArm/Character_Ctrl:RightHand/Character_Ctrl:RightHandPinky1/Character_Ctrl:RightHandPinky2
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:RightShoulder/Character_Ctrl:RightArm/Character_Ctrl:RightForeArm/Character_Ctrl:RightHand/Character_Ctrl:RightHandPinky1/Character_Ctrl:RightHandPinky2/Character_Ctrl:RightHandPinky3
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:RightShoulder/Character_Ctrl:RightArm/Character_Ctrl:RightForeArm/Character_Ctrl:RightHand/Character_Ctrl:RightHandRing1
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:RightShoulder/Character_Ctrl:RightArm/Character_Ctrl:RightForeArm/Character_Ctrl:RightHand/Character_Ctrl:RightHandRing1/Character_Ctrl:RightHandRing2
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:RightShoulder/Character_Ctrl:RightArm/Character_Ctrl:RightForeArm/Character_Ctrl:RightHand/Character_Ctrl:RightHandRing1/Character_Ctrl:RightHandRing2/Character_Ctrl:RightHandRing3
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:RightShoulder/Character_Ctrl:RightArm/Character_Ctrl:RightForeArm/Character_Ctrl:RightHand/Character_Ctrl:RightHandThumb1
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:RightShoulder/Character_Ctrl:RightArm/Character_Ctrl:RightForeArm/Character_Ctrl:RightHand/Character_Ctrl:RightHandThumb1/Character_Ctrl:RightHandThumb2
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:Hips/Character_Ctrl:Spine/Character_Ctrl:Spine1/Character_Ctrl:RightShoulder/Character_Ctrl:RightArm/Character_Ctrl:RightForeArm/Character_Ctrl:RightHand/Character_Ctrl:RightHandThumb1/Character_Ctrl:RightHandThumb2/Character_Ctrl:RightHandThumb3
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:HipsEffector
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:LeftAnkleEffector
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:LeftElbowEffector
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:LeftFootEffector
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:LeftHandIndexEffector
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:LeftHandMiddleEffector
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:LeftHandPinkyEffector
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:LeftHandRingEffector
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:LeftHandThumbEffector
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:LeftHipEffector
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:LeftKneeEffector
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:LeftShoulderEffector
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:LeftWristEffector
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:RightAnkleEffector
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:RightElbowEffector
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:RightFootEffector
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:RightHandIndexEffector
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:RightHandMiddleEffector
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:RightHandPinkyEffector
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:RightHandRingEffector
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:RightHandThumbEffector
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:RightHipEffector
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:RightKneeEffector
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:RightShoulderEffector
+        weight: 1
+      - path: Character_Ctrl:Reference/Character_Ctrl:RightWristEffector
+        weight: 1
+      - path: charakter
+        weight: 1
+      - path: charakter/Charakter_NEU3
+        weight: 1
+      - path: charakter/Charakter_NEU3/headPlace
+        weight: 1
+      - path: Charakter_einzeln
+        weight: 1
+      - path: Charakter_einzeln/arm_links
+        weight: 1
+      - path: Charakter_einzeln/arm_rechts
+        weight: 1
+      - path: Charakter_einzeln/bein_links
+        weight: 1
+      - path: Charakter_einzeln/bein_rechts
+        weight: 1
+      - path: Charakter_einzeln/hals
+        weight: 1
+      - path: Charakter_einzeln/handl_links
+        weight: 1
+      - path: Charakter_einzeln/handl_links_1
+        weight: 1
+      - path: Charakter_einzeln/handl_links_2
+        weight: 1
+      - path: Charakter_einzeln/handl_links_3
+        weight: 1
+      - path: Charakter_einzeln/handl_links_4
+        weight: 1
+      - path: Charakter_einzeln/handl_links_5
+        weight: 1
+      - path: Charakter_einzeln/handl_links_6
+        weight: 1
+      - path: Charakter_einzeln/handl_links_7
+        weight: 1
+      - path: Charakter_einzeln/handl_links_8
+        weight: 1
+      - path: Charakter_einzeln/handl_links_9
+        weight: 1
+      - path: Charakter_einzeln/handl_links_10
+        weight: 1
+      - path: Charakter_einzeln/handl_links_11
+        weight: 1
+      - path: Charakter_einzeln/Kapsel
+        weight: 1
+      - path: Charakter_einzeln/Kapsel_1
+        weight: 1
+      - path: Charakter_einzeln/Kugel
+        weight: 1
+      - path: Charakter_einzeln/Kugel_1
+        weight: 1
+      - path: "Charakter_einzeln/oberk\xF6rper"
+        weight: 1
+      - path: Charakter_einzeln/Symmetrie
+        weight: 1
+      - path: Charakter_einzeln/Symmetrie/Schulter_unten
+        weight: 1
+      - path: Charakter_einzeln/Symmetrie_2
+        weight: 1
+      - path: Charakter_einzeln/Symmetrie_2/Schukterrn
+        weight: 1
+      - path: Charakter_einzeln/Symmetrie_2/Symmetrie_3
+        weight: 1
+      - path: "Charakter_einzeln/Symmetrie_2/Symmetrie_3/Schulter_Gro\xDF"
+        weight: 1
+      - path: "Charakter_einzeln/unterk\xF6rper"
+        weight: 1
+      - path: CINEMA_4D_Editor
+        weight: 1
+      - path: gruen_Ctrl:Reference
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:ChestEndEffector
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:ChestOriginEffector
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:HeadEffector
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:LeftUpLeg
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:LeftUpLeg/gruen_Ctrl:LeftLeg
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:LeftUpLeg/gruen_Ctrl:LeftLeg/gruen_Ctrl:LeftFoot
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:LeftUpLeg/gruen_Ctrl:LeftLeg/gruen_Ctrl:LeftFoot/gruen_Ctrl:LeftToeBase
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:RightUpLeg
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:RightUpLeg/gruen_Ctrl:RightLeg
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:RightUpLeg/gruen_Ctrl:RightLeg/gruen_Ctrl:RightFoot
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:RightUpLeg/gruen_Ctrl:RightLeg/gruen_Ctrl:RightFoot/gruen_Ctrl:RightToeBase
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:LeftShoulder
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:LeftShoulder/gruen_Ctrl:LeftArm
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:LeftShoulder/gruen_Ctrl:LeftArm/gruen_Ctrl:LeftForeArm
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:LeftShoulder/gruen_Ctrl:LeftArm/gruen_Ctrl:LeftForeArm/gruen_Ctrl:LeftHand
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:LeftShoulder/gruen_Ctrl:LeftArm/gruen_Ctrl:LeftForeArm/gruen_Ctrl:LeftHand/gruen_Ctrl:LeftHandIndex1
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:LeftShoulder/gruen_Ctrl:LeftArm/gruen_Ctrl:LeftForeArm/gruen_Ctrl:LeftHand/gruen_Ctrl:LeftHandIndex1/gruen_Ctrl:LeftHandIndex2
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:LeftShoulder/gruen_Ctrl:LeftArm/gruen_Ctrl:LeftForeArm/gruen_Ctrl:LeftHand/gruen_Ctrl:LeftHandIndex1/gruen_Ctrl:LeftHandIndex2/gruen_Ctrl:LeftHandIndex3
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:LeftShoulder/gruen_Ctrl:LeftArm/gruen_Ctrl:LeftForeArm/gruen_Ctrl:LeftHand/gruen_Ctrl:LeftHandMiddle1
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:LeftShoulder/gruen_Ctrl:LeftArm/gruen_Ctrl:LeftForeArm/gruen_Ctrl:LeftHand/gruen_Ctrl:LeftHandMiddle1/gruen_Ctrl:LeftHandMiddle2
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:LeftShoulder/gruen_Ctrl:LeftArm/gruen_Ctrl:LeftForeArm/gruen_Ctrl:LeftHand/gruen_Ctrl:LeftHandMiddle1/gruen_Ctrl:LeftHandMiddle2/gruen_Ctrl:LeftHandMiddle3
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:LeftShoulder/gruen_Ctrl:LeftArm/gruen_Ctrl:LeftForeArm/gruen_Ctrl:LeftHand/gruen_Ctrl:LeftHandPinky1
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:LeftShoulder/gruen_Ctrl:LeftArm/gruen_Ctrl:LeftForeArm/gruen_Ctrl:LeftHand/gruen_Ctrl:LeftHandPinky1/gruen_Ctrl:LeftHandPinky2
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:LeftShoulder/gruen_Ctrl:LeftArm/gruen_Ctrl:LeftForeArm/gruen_Ctrl:LeftHand/gruen_Ctrl:LeftHandPinky1/gruen_Ctrl:LeftHandPinky2/gruen_Ctrl:LeftHandPinky3
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:LeftShoulder/gruen_Ctrl:LeftArm/gruen_Ctrl:LeftForeArm/gruen_Ctrl:LeftHand/gruen_Ctrl:LeftHandRing1
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:LeftShoulder/gruen_Ctrl:LeftArm/gruen_Ctrl:LeftForeArm/gruen_Ctrl:LeftHand/gruen_Ctrl:LeftHandRing1/gruen_Ctrl:LeftHandRing2
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:LeftShoulder/gruen_Ctrl:LeftArm/gruen_Ctrl:LeftForeArm/gruen_Ctrl:LeftHand/gruen_Ctrl:LeftHandRing1/gruen_Ctrl:LeftHandRing2/gruen_Ctrl:LeftHandRing3
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:LeftShoulder/gruen_Ctrl:LeftArm/gruen_Ctrl:LeftForeArm/gruen_Ctrl:LeftHand/gruen_Ctrl:LeftHandThumb1
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:LeftShoulder/gruen_Ctrl:LeftArm/gruen_Ctrl:LeftForeArm/gruen_Ctrl:LeftHand/gruen_Ctrl:LeftHandThumb1/gruen_Ctrl:LeftHandThumb2
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:LeftShoulder/gruen_Ctrl:LeftArm/gruen_Ctrl:LeftForeArm/gruen_Ctrl:LeftHand/gruen_Ctrl:LeftHandThumb1/gruen_Ctrl:LeftHandThumb2/gruen_Ctrl:LeftHandThumb3
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:Neck
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:Neck/gruen_Ctrl:Head
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:RightShoulder
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:RightShoulder/gruen_Ctrl:RightArm
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:RightShoulder/gruen_Ctrl:RightArm/gruen_Ctrl:RightForeArm
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:RightShoulder/gruen_Ctrl:RightArm/gruen_Ctrl:RightForeArm/gruen_Ctrl:RightHand
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:RightShoulder/gruen_Ctrl:RightArm/gruen_Ctrl:RightForeArm/gruen_Ctrl:RightHand/gruen_Ctrl:RightHandIndex1
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:RightShoulder/gruen_Ctrl:RightArm/gruen_Ctrl:RightForeArm/gruen_Ctrl:RightHand/gruen_Ctrl:RightHandIndex1/gruen_Ctrl:RightHandIndex2
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:RightShoulder/gruen_Ctrl:RightArm/gruen_Ctrl:RightForeArm/gruen_Ctrl:RightHand/gruen_Ctrl:RightHandIndex1/gruen_Ctrl:RightHandIndex2/gruen_Ctrl:RightHandIndex3
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:RightShoulder/gruen_Ctrl:RightArm/gruen_Ctrl:RightForeArm/gruen_Ctrl:RightHand/gruen_Ctrl:RightHandMiddle1
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:RightShoulder/gruen_Ctrl:RightArm/gruen_Ctrl:RightForeArm/gruen_Ctrl:RightHand/gruen_Ctrl:RightHandMiddle1/gruen_Ctrl:RightHandMiddle2
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:RightShoulder/gruen_Ctrl:RightArm/gruen_Ctrl:RightForeArm/gruen_Ctrl:RightHand/gruen_Ctrl:RightHandMiddle1/gruen_Ctrl:RightHandMiddle2/gruen_Ctrl:RightHandMiddle3
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:RightShoulder/gruen_Ctrl:RightArm/gruen_Ctrl:RightForeArm/gruen_Ctrl:RightHand/gruen_Ctrl:RightHandPinky1
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:RightShoulder/gruen_Ctrl:RightArm/gruen_Ctrl:RightForeArm/gruen_Ctrl:RightHand/gruen_Ctrl:RightHandPinky1/gruen_Ctrl:RightHandPinky2
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:RightShoulder/gruen_Ctrl:RightArm/gruen_Ctrl:RightForeArm/gruen_Ctrl:RightHand/gruen_Ctrl:RightHandPinky1/gruen_Ctrl:RightHandPinky2/gruen_Ctrl:RightHandPinky3
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:RightShoulder/gruen_Ctrl:RightArm/gruen_Ctrl:RightForeArm/gruen_Ctrl:RightHand/gruen_Ctrl:RightHandRing1
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:RightShoulder/gruen_Ctrl:RightArm/gruen_Ctrl:RightForeArm/gruen_Ctrl:RightHand/gruen_Ctrl:RightHandRing1/gruen_Ctrl:RightHandRing2
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:RightShoulder/gruen_Ctrl:RightArm/gruen_Ctrl:RightForeArm/gruen_Ctrl:RightHand/gruen_Ctrl:RightHandRing1/gruen_Ctrl:RightHandRing2/gruen_Ctrl:RightHandRing3
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:RightShoulder/gruen_Ctrl:RightArm/gruen_Ctrl:RightForeArm/gruen_Ctrl:RightHand/gruen_Ctrl:RightHandThumb1
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:RightShoulder/gruen_Ctrl:RightArm/gruen_Ctrl:RightForeArm/gruen_Ctrl:RightHand/gruen_Ctrl:RightHandThumb1/gruen_Ctrl:RightHandThumb2
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:Hips/gruen_Ctrl:Spine/gruen_Ctrl:Spine1/gruen_Ctrl:RightShoulder/gruen_Ctrl:RightArm/gruen_Ctrl:RightForeArm/gruen_Ctrl:RightHand/gruen_Ctrl:RightHandThumb1/gruen_Ctrl:RightHandThumb2/gruen_Ctrl:RightHandThumb3
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:HipsEffector
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:LeftAnkleEffector
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:LeftElbowEffector
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:LeftFootEffector
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:LeftHandIndexEffector
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:LeftHandMiddleEffector
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:LeftHandPinkyEffector
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:LeftHandRingEffector
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:LeftHandThumbEffector
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:LeftHipEffector
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:LeftKneeEffector
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:LeftShoulderEffector
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:LeftWristEffector
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:RightAnkleEffector
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:RightElbowEffector
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:RightFootEffector
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:RightHandIndexEffector
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:RightHandMiddleEffector
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:RightHandPinkyEffector
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:RightHandRingEffector
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:RightHandThumbEffector
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:RightHipEffector
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:RightKneeEffector
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:RightShoulderEffector
+        weight: 1
+      - path: gruen_Ctrl:Reference/gruen_Ctrl:RightWristEffector
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/Hips
+        weight: 1
+      - path: Root/Hips/LeftUpLeg
+        weight: 1
+      - path: Root/Hips/LeftUpLeg/LeftLeg
+        weight: 1
+      - path: Root/Hips/LeftUpLeg/LeftLeg/LeftFoot
+        weight: 1
+      - path: Root/Hips/LeftUpLeg/LeftLeg/LeftFoot/LeftToeBase
+        weight: 1
+      - path: Root/Hips/RightUpLeg
+        weight: 1
+      - path: Root/Hips/RightUpLeg/RightLeg
+        weight: 1
+      - path: Root/Hips/RightUpLeg/RightLeg/RightFoot
+        weight: 1
+      - path: Root/Hips/RightUpLeg/RightLeg/RightFoot/RightToeBase
+        weight: 1
+      - path: Root/Hips/Spine
+        weight: 1
+      - path: Root/Hips/Spine/Spine1
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/LeftShoulder
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/LeftShoulder/LeftArm
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/LeftShoulder/LeftArm/LeftForeArm
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/LeftShoulder/LeftArm/LeftForeArm/LeftHand
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandIndex1
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandIndex1/LeftHandIndex2
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandIndex1/LeftHandIndex2/LeftHandIndex3
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandMiddle1
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandMiddle1/LeftHandMiddle2
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandMiddle1/LeftHandMiddle2/LeftHandMiddle3
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandPinky1
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandPinky1/LeftHandPinky2
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandPinky1/LeftHandPinky2/LeftHandPinky3
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandRing1
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandRing1/LeftHandRing2
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandRing1/LeftHandRing2/LeftHandRing3
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandThumb1
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandThumb1/LeftHandThumb2
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandThumb1/LeftHandThumb2/LeftHandThumb3
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/Neck
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/Neck/Head
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/RightShoulder
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/RightShoulder/RightArm
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/RightShoulder/RightArm/RightForeArm
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/RightShoulder/RightArm/RightForeArm/RightHand
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/RightShoulder/RightArm/RightForeArm/RightHand/RightHandIndex1
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/RightShoulder/RightArm/RightForeArm/RightHand/RightHandIndex1/RightHandIndex2
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/RightShoulder/RightArm/RightForeArm/RightHand/RightHandIndex1/RightHandIndex2/RightHandIndex3
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/RightShoulder/RightArm/RightForeArm/RightHand/RightHandMiddle1
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/RightShoulder/RightArm/RightForeArm/RightHand/RightHandMiddle1/RightHandMiddle2
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/RightShoulder/RightArm/RightForeArm/RightHand/RightHandMiddle1/RightHandMiddle2/RightHandMiddle3
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/RightShoulder/RightArm/RightForeArm/RightHand/RightHandPinky1
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/RightShoulder/RightArm/RightForeArm/RightHand/RightHandPinky1/RightHandPinky2
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/RightShoulder/RightArm/RightForeArm/RightHand/RightHandPinky1/RightHandPinky2/RightHandPinky3
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/RightShoulder/RightArm/RightForeArm/RightHand/RightHandRing1
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/RightShoulder/RightArm/RightForeArm/RightHand/RightHandRing1/RightHandRing2
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/RightShoulder/RightArm/RightForeArm/RightHand/RightHandRing1/RightHandRing2/RightHandRing3
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/RightShoulder/RightArm/RightForeArm/RightHand/RightHandThumb1
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/RightShoulder/RightArm/RightForeArm/RightHand/RightHandThumb1/RightHandThumb2
+        weight: 1
+      - path: Root/Hips/Spine/Spine1/RightShoulder/RightArm/RightForeArm/RightHand/RightHandThumb1/RightHandThumb2/RightHandThumb3
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: b267fc581801aa344a55fd2bf70cc2e7,
+    type: 3}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
