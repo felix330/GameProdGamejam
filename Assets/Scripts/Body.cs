@@ -98,14 +98,12 @@ public class Body : MonoBehaviour {
 				isUsed = false;
 				headless = false;
 			}*/
-			
-			if(collisionInfo.gameObject.name == "GameEnd" && !headless){
-				//Lade Endbildschirm
-				Debug.Log("Game Over");
-			}
 		}
-		
-		
+
+		if(collisionInfo.gameObject.name == "GameEnd" && !headless){
+			//Lade Endbildschirm
+			Debug.Log("Game Over");
+		}
 	}
 
 	void PickUpAttach() {
