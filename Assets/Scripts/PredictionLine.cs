@@ -13,7 +13,7 @@ public class PredictionLine : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		positions = new ArrayList();
-		counter = 10;
+		counter = 0;
 	}
 	
 	// Update is called once per frame
@@ -22,14 +22,19 @@ public class PredictionLine : MonoBehaviour {
 		{
 			Debug.Log("Prediction Line active");
 			Debug.Log(ball);
-			counter++;
 
-			if (ball != null && !Physics.Raycast(ball.transform.position,Vector3.down,0.6f) && counter > 10)
+
+			if (ball != null && !Physics.Raycast(ball.transform.position,Vector3.down,0.6f))
 			{
-				Debug.Log("Add position");
-				positions.Add(ball.transform.position);
-				drawLines();
-				counter = 0;
+				counter++;
+
+				if (counter > 10)
+				{
+					Debug.Log("Add position");
+					positions.Add(ball.transform.position);
+					drawLines();
+					counter = 0;
+				}
 			}
 		}
 	}
