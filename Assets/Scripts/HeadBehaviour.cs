@@ -15,6 +15,8 @@ public class HeadBehaviour : MonoBehaviour {
 	public bool attachedToBody;
 	public GameObject laserPoint;
 
+
+
 	private GameObject newLaserPoint;
 	private bool laserCreated;
 	
