@@ -124,4 +124,25 @@ public class Body : MonoBehaviour {
 
 		pickingUp = false;
 	}
+
+	void CatchHead(GameObject h)
+	{
+		if (headless && !gotAnObject && h.GetComponent<ThrowableObject>().myBody != gameObject)
+		{
+
+			headPosition.transform.localPosition = new Vector3(0.09f,1.4f,-0.14f);
+			headPosition.transform.localEulerAngles = Vector3.zero;
+			h.transform.parent = headPosition.transform;
+			h.transform.localPosition = Vector3.zero;
+			h.transform.rotation = headPosition.transform.rotation;
+			h.GetComponent<ThrowableObject>().attachedToBody = true;
+			h.GetComponent<ThrowableObject>().myBody = gameObject;
+			h.gameObject.GetComponent<HeadBehaviour>().attachedToBody = true;
+
+			isUsed = false;
+			headless = false;
+			gotAnObject = true;
+			BroadcastMessage("HeadCatch");
+		}
+	}
 }

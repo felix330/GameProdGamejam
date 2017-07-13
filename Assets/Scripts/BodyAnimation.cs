@@ -59,4 +59,9 @@ public class BodyAnimation : MonoBehaviour {
 	{
 		GetComponent<AudioSource>().Play();
 	}
+
+	void HeadCatch()
+	{
+		animator.SetTrigger("Catch");
+	}
 }
