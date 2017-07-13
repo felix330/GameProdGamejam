@@ -99,6 +99,7 @@ public class ThrowableObject : MonoBehaviour {
 				if(gameObject.name == "Head"){
 					myBody.gameObject.GetComponent<Body>().headless = true;
 				}
+				transform.rotation = myBody.transform.rotation;
 				myBody.gameObject.GetComponent<Body>().gotAnObject = false;
 				transform.parent = null;
 				GetComponent<Rigidbody>().isKinematic = false;

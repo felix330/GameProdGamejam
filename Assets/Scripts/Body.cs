@@ -30,6 +30,7 @@ public class Body : MonoBehaviour {
 		CharacterController controller = GetComponent<CharacterController>();
 		
 		if(controller.isGrounded && !pickingUp){
+			
 			if (headless && isUsed) {
 				//Debug.Log("Ich werde beobachtet.");
 				moveDirection = new Vector3(0, 0, Input.GetAxis("Vertical"));

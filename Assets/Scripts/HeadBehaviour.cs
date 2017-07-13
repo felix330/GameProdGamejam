@@ -7,16 +7,14 @@ using UnityEngine;
 public class HeadBehaviour : MonoBehaviour {
 	public bool groundTouching = false;
 	public bool isFocusedOnBody = false;
+	public bool attachedToBody;
+	public GameObject laserPoint;
+	public GameObject myCurrentBody;
 	
 	private float headRotationX;
 	private float headRotationY;
 	private float rotationSpeed = 180;
 	private Vector3 rayForFocusingOnBody;
-	public bool attachedToBody;
-	public GameObject laserPoint;
-
-
-
 	private GameObject newLaserPoint;
 	private bool laserCreated;
 	
@@ -71,7 +69,7 @@ public class HeadBehaviour : MonoBehaviour {
 		//Throw a Raycast in Z direction and watch for bodies to be selected
 		rayForFocusingOnBody = transform.TransformDirection(Vector3.forward);
 		RaycastHit hit;
-		
+		Debug.Log(myCurrentBody);
         Debug.DrawRay(transform.position, rayForFocusingOnBody * 1000, Color.green);
 
         if (Physics.Raycast(transform.position, rayForFocusingOnBody, out hit, 1000)){
@@ -79,6 +77,11 @@ public class HeadBehaviour : MonoBehaviour {
 			if(hit.transform.tag == "Body"){
 				Debug.Log("Körper entdeckt");
 				isFocusedOnBody = true;
+				if(myCurrentBody != null && myCurrentBody != hit.transform.gameObject){
+					myCurrentBody.transform.gameObject.GetComponent<Body>().isUsed = false;
+					myCurrentBody.transform.gameObject.GetComponent<Body>().headless = true;
+				}
+				myCurrentBody = hit.transform.gameObject;
 				hit.transform.gameObject.GetComponent<Body>().isUsed = true;
 			}
 		}
