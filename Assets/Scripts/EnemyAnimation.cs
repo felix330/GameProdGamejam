@@ -23,4 +23,10 @@ public class EnemyAnimation : MonoBehaviour {
 		}
 
 	}
+
+	void Footstep()
+	{
+		GetComponent<AudioSource>().Play();
+	}
+
 }
