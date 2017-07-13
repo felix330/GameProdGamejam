@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 //Head class, requires ThrowableObject component
@@ -24,7 +25,6 @@ public class HeadBehaviour : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
 		attachedToBody = GetComponent<ThrowableObject>().attachedToBody;
 		headRotationY = -Input.GetAxis("Mouse Y") * rotationSpeed * Time.deltaTime;
 		transform.Rotate(Vector3.right * headRotationY);
@@ -42,19 +42,24 @@ public class HeadBehaviour : MonoBehaviour {
 					}
 					FocusOnBody();
 				}
-				if(Input.GetKeyUp(KeyCode.F)){
+				if(Input.GetKeyUp(KeyCode.F) && myCurrentBody != null){
 					Destroy(newLaserPoint);
 					newLaserPoint = null;
 					laserCreated = false;
 				}
 			}
+			
+			if(Input.GetKeyUp(KeyCode.R)){
+				//Level reset
+				SceneManager.LoadScene("LevelTest", LoadSceneMode.Single);
+			}
+			
 		} else {
 			if(laserCreated){
 				Destroy(newLaserPoint);
 				newLaserPoint = null;
 				laserCreated = false;
-			}
-				
+			}	
 		}
 	}
 	

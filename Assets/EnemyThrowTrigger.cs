@@ -15,10 +15,12 @@ public class EnemyThrowTrigger : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider c) {
-		if (c.gameObject.tag == "ThrowableObject" && !c.gameObject.GetComponent<HeadBehaviour>().attachedToBody)
-		{
-			Debug.Log("Entered trigger");
-			SendMessageUpwards("PickUpHead");
+		if(c.gameObject.GetComponent<HeadBehaviour>() != null){
+			if (c.gameObject.tag == "ThrowableObject" && !c.gameObject.GetComponent<HeadBehaviour>().attachedToBody){
+				Debug.Log("Entered trigger");
+				SendMessageUpwards("PickUpHead");
+			}
 		}
+		
 	}
 }

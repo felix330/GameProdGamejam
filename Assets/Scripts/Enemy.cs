@@ -30,7 +30,7 @@ public class Enemy : MonoBehaviour {
 	void Update () {
 		//Only follow stray heads
 		Vector3 moveDirection = new Vector3();
-		if (inPursuit && ThrowObj != null)
+		if (inPursuit && ThrowObj.GetComponent<HeadBehaviour>() != null)
 		{
 			if (!ThrowObj.GetComponent<HeadBehaviour>().attachedToBody && ThrowObj.GetComponent<HeadBehaviour>().groundTouching)
 			{
