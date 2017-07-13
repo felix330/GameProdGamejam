@@ -9,6 +9,7 @@ public class HeadBehaviour : MonoBehaviour {
 	public bool groundTouching = false;
 	public bool isFocusedOnBody = false;
 	public bool attachedToBody;
+	public bool focusedOnBody;
 	public GameObject laserPoint;
 	public GameObject myCurrentBody;
 	
@@ -87,6 +88,7 @@ public class HeadBehaviour : MonoBehaviour {
 				}
 				myCurrentBody = hit.transform.gameObject;
 				hit.transform.gameObject.GetComponent<Body>().isUsed = true;
+				focusedOnBody = true;
 			}
 		}
 	}

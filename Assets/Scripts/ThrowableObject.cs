@@ -63,6 +63,7 @@ public class ThrowableObject : MonoBehaviour {
 
 				if (Input.GetButtonDown("Throw")) {
 					if(gameObject.name == "Head"){
+						gameObject.GetComponent<HeadBehaviour>().focusedOnBody = false;
 						myBody.GetComponent<Body>().headless = true;
 					}
 					myBody.gameObject.GetComponent<Body>().gotAnObject = false;
@@ -88,6 +89,7 @@ public class ThrowableObject : MonoBehaviour {
 			
 			if (Input.GetKeyDown(KeyCode.Q)) {
 				if(gameObject.name == "Head"){
+					gameObject.GetComponent<HeadBehaviour>().focusedOnBody = false;
 					myBody.gameObject.GetComponent<Body>().headless = true;
 				}
 				transform.rotation = myBody.transform.rotation;
