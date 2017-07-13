@@ -137,8 +137,7 @@ public class Body : MonoBehaviour {
 
 	void CatchHead(GameObject h)
 	{
-		if (headless && !gotAnObject && h.GetComponent<ThrowableObject>().myBody != gameObject)
-		{
+		if (headless && !gotAnObject && h.GetComponent<ThrowableObject>().myBody != gameObject) {
 
 			headPosition.transform.localPosition = new Vector3(0.09f,1.4f,-0.14f);
 			headPosition.transform.localEulerAngles = Vector3.zero;

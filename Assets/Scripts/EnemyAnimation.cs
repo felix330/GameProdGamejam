@@ -14,8 +14,7 @@ public class EnemyAnimation : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (body.GetComponent<CharacterController>().isGrounded)
-		{
+		if (body.GetComponent<CharacterController>().isGrounded) {
 			animator.SetBool("Jump",false);
 			animator.SetFloat("WalkSpeed",body.transform.InverseTransformDirection(body.GetComponent<CharacterController>().velocity).z/2.6f);
 		} else {
@@ -24,8 +23,7 @@ public class EnemyAnimation : MonoBehaviour {
 
 	}
 
-	void Footstep()
-	{
+	void Footstep() {
 		GetComponent<AudioSource>().Play();
 	}
 

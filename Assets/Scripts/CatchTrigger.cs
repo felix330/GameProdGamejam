@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Trigger event sender for when a flying head is caught by a body
 public class CatchTrigger : MonoBehaviour {
 
 	// Use this for initialization
@@ -15,7 +16,7 @@ public class CatchTrigger : MonoBehaviour {
 	}
 
 	void OnTriggerEnter (Collider c) {
-		if (c.gameObject.name == "Head"){
+		if (c.gameObject.name == "Head") {
 			transform.parent.SendMessage("CatchHead",c.gameObject);
 		}
 	}

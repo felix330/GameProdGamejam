@@ -22,8 +22,7 @@ public class ThrowBar : MonoBehaviour {
 	}
 	
 	public void ChangeScrollbar(GameObject _throwingObject){
-		if (_throwingObject.GetComponent<ThrowableObject>().ThrowMode)
-		{
+		if (_throwingObject.GetComponent<ThrowableObject>().ThrowMode) {
 			GetComponent<RectTransform>().localScale = Vector2.one;
 			//Scales Throw Power between 1 and 0
 			currentPower = _throwingObject.GetComponent<ThrowableObject>().throwPower;

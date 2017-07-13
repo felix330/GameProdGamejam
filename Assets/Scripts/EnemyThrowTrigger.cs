@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Trigger event sender for when enemy is in throwing range
 public class EnemyThrowTrigger : MonoBehaviour {
 
 	// Use this for initialization

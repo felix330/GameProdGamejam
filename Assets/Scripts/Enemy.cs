@@ -65,8 +65,7 @@ public class Enemy : MonoBehaviour {
 
 
 	//Take the head and throw it into direction
-	void PickUpHead()
-	{
+	void PickUpHead() {
 		Debug.Log("Picking up Head");
 		/*ThrowObj.GetComponent<Rigidbody>().isKinematic = true;
 		ThrowObj.transform.parent = headPosition.transform;

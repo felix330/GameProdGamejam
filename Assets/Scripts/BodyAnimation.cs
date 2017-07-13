@@ -19,18 +19,14 @@ public class BodyAnimation : MonoBehaviour {
 			animator.SetBool("Jump",false);
 			animator.SetFloat("WalkSpeed",body.transform.InverseTransformDirection(body.GetComponent<CharacterController>().velocity).z/2.6f);
 
-			if (body.transform.InverseTransformDirection(body.GetComponent<CharacterController>().velocity).z==0 && !body.GetComponent<Body>().headless)
-			{
-				if (Input.GetAxis("Horizontal")>0)
-				{
+			if (body.transform.InverseTransformDirection(body.GetComponent<CharacterController>().velocity).z==0 && !body.GetComponent<Body>().headless) {
+				if (Input.GetAxis("Horizontal")>0) {
 					animator.SetBool("SidewaysWalk",true);
 					animator.SetFloat("SidewaysSpeed",4);
-				} else if (Input.GetAxis("Horizontal")<0)
-				{
+				} else if (Input.GetAxis("Horizontal")<0) {
 					animator.SetBool("SidewaysWalk",true);
 					animator.SetFloat("SidewaysSpeed",-4);
-				} else 
-				{
+				} else {
 					animator.SetBool("SidewaysWalk",false);
 				}
 			}

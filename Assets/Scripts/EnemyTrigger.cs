@@ -15,18 +15,14 @@ public class EnemyTrigger : MonoBehaviour {
 		
 	}
 
-	void OnTriggerEnter (Collider c)
-	{
-		if (c.gameObject.tag == "ThrowableObject")
-		{
+	void OnTriggerEnter (Collider c) {
+		if (c.gameObject.tag == "ThrowableObject") {
 			transform.parent.SendMessage("ThrowableObjectFound",c.gameObject);
 		}
 	}
 
-	void OnTriggerExit (Collider c)
-	{
-		if (c.gameObject.tag == "ThrowableObject")
-		{
+	void OnTriggerExit (Collider c) {
+		if (c.gameObject.tag == "ThrowableObject") {
 			transform.parent.SendMessage("ThrowableObjectGone",c.gameObject);
 		}
 	}

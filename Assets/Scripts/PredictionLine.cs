@@ -18,14 +18,12 @@ public class PredictionLine : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (active)
-		{
+		if (active) {
 			Debug.Log("Prediction Line active");
 			Debug.Log(ball);
 
 
-			if (ball != null && !Physics.Raycast(ball.transform.position,Vector3.down,0.6f))
-			{
+			if (ball != null && !Physics.Raycast(ball.transform.position,Vector3.down,0.6f)) {
 				counter++;
 
 				if (counter > 4)
@@ -39,8 +37,7 @@ public class PredictionLine : MonoBehaviour {
 		}
 	}
 
-	void drawLines()
-	{
+	void drawLines() {
 		Debug.Log("Draw Lines");
 		GetComponent<LineRenderer>().positionCount = positions.Count;
 
@@ -52,8 +49,7 @@ public class PredictionLine : MonoBehaviour {
 		}*/
 	}
 
-	void SetBall(GameObject g)
-	{
+	void SetBall(GameObject g) {
 		Debug.Log("Setting Ball");
 		ball = g;
 	}

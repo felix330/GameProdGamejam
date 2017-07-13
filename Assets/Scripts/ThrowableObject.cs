@@ -37,8 +37,7 @@ public class ThrowableObject : MonoBehaviour {
 			GetComponent<MeshCollider>().enabled = true;
 			GetComponent<Rigidbody>().isKinematic = false;
 
-			if (!predictionLine.GetComponent<PredictionLine>().active)
-			{
+			if (!predictionLine.GetComponent<PredictionLine>().active) {
 				predictionLine.GetComponent<LineRenderer>().positionCount = 0;
 				predictionLine.GetComponent<PredictionLine>().positions = new ArrayList();
 				predictionLine.GetComponent<PredictionLine>().ball = null;
@@ -49,25 +48,20 @@ public class ThrowableObject : MonoBehaviour {
 			GetComponent<MeshCollider>().enabled = false;
 			
 			float tempThrowPower = throwPower;
-			if (ThrowMode)
-			{
-				if(Input.GetAxis("Distance")>0 && throwPower < maxThrowPower)
-				{
+			if (ThrowMode) {
+				if(Input.GetAxis("Distance")>0 && throwPower < maxThrowPower) {
 					throwPower += 1f;
 				}
 
-				if(Input.GetAxis("Distance")<0 && throwPower > minThrowPower)
-				{
+				if(Input.GetAxis("Distance")<0 && throwPower > minThrowPower) {
 					throwPower -= 1f;
 				}
 
-				if (tempThrowPower != throwPower || transform.position != tempPosition || transform.rotation != tempRotation)
-				{
+				if (tempThrowPower != throwPower || transform.position != tempPosition || transform.rotation != tempRotation) {
 					ResetThrowPredict();
 				}
 
-				if (Input.GetButtonDown("Throw"))
-				{
+				if (Input.GetButtonDown("Throw")) {
 					if(gameObject.name == "Head"){
 						myBody.GetComponent<Body>().headless = true;
 					}
@@ -85,17 +79,14 @@ public class ThrowableObject : MonoBehaviour {
 			
 			scrollbarScript.ChangeScrollbar(gameObject);
 			
-			if (Input.GetButtonDown("Throw"))
-			{
-				if (ThrowMode == false && attachedToBody)
-				{
+			if (Input.GetButtonDown("Throw")) {
+				if (ThrowMode == false && attachedToBody) {
 					ThrowMode = true;
 					ThrowPredict();
 				}
 			}
 			
-			if (Input.GetKeyDown(KeyCode.Q))
-			{
+			if (Input.GetKeyDown(KeyCode.Q)) {
 				if(gameObject.name == "Head"){
 					myBody.gameObject.GetComponent<Body>().headless = true;
 				}
@@ -114,9 +105,8 @@ public class ThrowableObject : MonoBehaviour {
 		tempRotation = transform.rotation;
 	}
 	
-			
-	void ThrowPredict()
-	{
+	//Throws an invisible object for prediction of flight		
+	void ThrowPredict() {
 		Debug.Log("Throwpredict"+gameObject.name);
 		newTestBall = Instantiate(testBall);
 		newTestBall.transform.position = transform.position;
@@ -132,8 +122,7 @@ public class ThrowableObject : MonoBehaviour {
 
 	void ResetThrowPredict()
 	{
-		if (newTestBall != null)
-		{
+		if (newTestBall != null) {
 			Destroy(newTestBall);
 			newTestBall = null;
 			predictionLine.GetComponent<LineRenderer>().positionCount = 0;
@@ -143,8 +132,7 @@ public class ThrowableObject : MonoBehaviour {
 		}
 	}
 
-	void GetThrown(Vector3 v)
-	{
+	void GetThrown(Vector3 v) {
 		ThrowMode = false;
 		newTestBall = null;
 		predictionLine.GetComponent<LineRenderer>().positionCount = 0;
