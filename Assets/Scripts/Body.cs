@@ -66,6 +66,7 @@ public class Body : MonoBehaviour {
 			
 			if (headless && !isUsed) {
 				//Debug.Log("Ich bin kopflos.");
+				moveDirection = Vector3.zero;
 			}
 			
 		}

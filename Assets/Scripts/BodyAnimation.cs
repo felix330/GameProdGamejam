@@ -25,11 +25,11 @@ public class BodyAnimation : MonoBehaviour {
 				if (Input.GetAxis("Horizontal")>0)
 				{
 					animator.SetBool("SidewaysWalk",true);
-					animator.SetFloat("SidewaysSpeed",2);
+					animator.SetFloat("SidewaysSpeed",4);
 				} else if (Input.GetAxis("Horizontal")<0)
 				{
 					animator.SetBool("SidewaysWalk",true);
-					animator.SetFloat("SidewaysSpeed",-2);
+					animator.SetFloat("SidewaysSpeed",-4);
 				} else 
 				{
 					animator.SetBool("SidewaysWalk",false);
