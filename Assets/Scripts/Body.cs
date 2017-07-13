@@ -102,20 +102,26 @@ public class Body : MonoBehaviour {
 		connectedObject.transform.localPosition = Vector3.zero;
 		connectedObject.transform.rotation = headPosition.transform.rotation;
 		connectedObject.GetComponent<ThrowableObject>().attachedToBody = true;
+		connectedObject.GetComponent<ThrowableObject>().myBody = gameObject;
 		if(connectedObject.gameObject.name == "Head"){
 			connectedObject.gameObject.GetComponent<HeadBehaviour>().attachedToBody = true;
 			isUsed = false;
 			headless = false;
 		}
 		headPosition.transform.parent = hand.transform;
-		headPosition.transform.localPosition = Vector3.zero;
+		headPosition.transform.localPosition = new Vector3(-0.7f,0.25f,0.14f);
 	}
 
 	void HoldUpAttach() {
 		gotAnObject = true;
-		headPosition.transform.parent = transform;
-		headPosition.transform.localEulerAngles = Vector3.zero;
-		headPosition.transform.localPosition = new Vector3(0.09f,1.4f,-0.14f);
+		if (headless){
+			headPosition.transform.parent = hand.transform;
+		} else {
+			headPosition.transform.parent = transform;
+			headPosition.transform.localEulerAngles = Vector3.zero;
+			headPosition.transform.localPosition = new Vector3(0.09f,1.4f,-0.14f);
+		}
+
 		pickingUp = false;
 	}
 }

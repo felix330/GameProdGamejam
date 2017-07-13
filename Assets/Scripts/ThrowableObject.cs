@@ -19,6 +19,8 @@ public class ThrowableObject : MonoBehaviour {
 	private ThrowBar scrollbarScript; 
 
 	public bool ThrowMode;
+
+	public GameObject myBody;
 	
 	// Use this for initialization
 	void Start () {
@@ -67,10 +69,10 @@ public class ThrowableObject : MonoBehaviour {
 				if (Input.GetButtonDown("Throw"))
 				{
 					if(gameObject.name == "Head"){
-						transform.parent.parent.gameObject.GetComponent<Body>().headless = true;
+						myBody.GetComponent<Body>().headless = true;
 					}
-					transform.parent.parent.gameObject.GetComponent<Body>().gotAnObject = false;
-					transform.parent.parent.BroadcastMessage("ReceiveThrow");
+					myBody.gameObject.GetComponent<Body>().gotAnObject = false;
+					myBody.BroadcastMessage("ReceiveThrow");
 					transform.parent = null;
 					GetComponent<Rigidbody>().isKinematic = false;
 					attachedToBody = false;
@@ -95,9 +97,9 @@ public class ThrowableObject : MonoBehaviour {
 			if (Input.GetKeyDown(KeyCode.Q))
 			{
 				if(gameObject.name == "Head"){
-					transform.parent.parent.gameObject.GetComponent<Body>().headless = true;
+					myBody.gameObject.GetComponent<Body>().headless = true;
 				}
-				transform.parent.parent.gameObject.GetComponent<Body>().gotAnObject = false;
+				myBody.gameObject.GetComponent<Body>().gotAnObject = false;
 				transform.parent = null;
 				GetComponent<Rigidbody>().isKinematic = false;
 				attachedToBody = false;
