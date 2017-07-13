@@ -104,7 +104,7 @@ public class ThrowableObject : MonoBehaviour {
 				GetComponent<Rigidbody>().isKinematic = false;
 				attachedToBody = false;
 				ThrowMode = false;
-				GetComponent<Rigidbody>().AddForce(new Vector3(transform.TransformDirection(Vector3.forward).x*10f,1.7f,transform.TransformDirection(Vector3.forward).z)*10f);
+				GetComponent<Rigidbody>().AddForce(new Vector3(transform.TransformDirection(Vector3.forward).x,1.7f*3,transform.TransformDirection(Vector3.forward).z)*50f);
 			}
 				
 		}
