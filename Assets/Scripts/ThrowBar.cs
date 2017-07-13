@@ -13,7 +13,7 @@ public class ThrowBar : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		GetComponent<RectTransform>().localScale = Vector2.zero;
 	}
 	
 	// Update is called once per frame
